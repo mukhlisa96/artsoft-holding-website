@@ -1,0 +1,368 @@
+
+:root {
+  --main-block-borders-color: rgb(255 255 255 / 31%);;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    font-weight: 700;
+    color: white;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+.slider-container{
+    position: relative;
+    overflow: hidden;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.left-sidebar{
+    height: 100vh;
+    width: 18%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 45;
+     border-right: 0.5px solid var(--main-block-borders-color);
+}
+
+
+.left-sidebar > div.first{
+    /*border-right: 0.5px solid var(--main-block-borders-color);*/
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    flex: 6;
+    display: flex;
+    align-items: center;
+}
+
+ul.menu-links{
+    list-style: none;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    left: 0;
+    position: fixed;
+}
+
+ul.menu-links > li{
+    margin: 15px 0;
+}
+
+ul.menu-links:nth-child(1){
+   /*transform: translateY(-100%);*/
+}
+
+
+.menu-link-span{
+    display: inline-block;
+    width: 20px;
+    background-color: white;
+    height: 1px;
+    margin: 5px;
+}
+
+.sound-control{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+/*sidebar right start*/
+.right-sidebar{
+    height: 100vh;
+    width: 8%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    border-left: 0.5px solid var(--main-block-borders-color);
+    z-index: 40;
+
+
+}
+
+.right-sidebar > div.fourth{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.fourth > .burger{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+.line{
+    width: 40px;
+    height: 1px;
+    margin: 5px;
+    background-color: white;
+}
+
+
+
+.o-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*center-block-wrapper*/
+.carousel{
+
+}
+.center-block-wrapper{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*left: 18%;*/
+    width: 100%;
+    /*background: blue;*/
+    display: flex;
+    flex-direction: column;
+    height: 500%;
+    transition: all 1.5s;
+    z-index: -1;
+}
+
+.burger-navbar{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgb(137, 167, 223) none repeat scroll 0% 0%;
+    display: flex;
+    flex-direction: column;
+    height: 500%;
+    z-index: 30;
+    transform: translateY(-100%);
+    transition: transform 1s ease-out;
+
+}
+
+.burger-nav-active{
+    transform: translateY(0%);
+    transition: transform 1.5s ease-in;
+
+
+}
+.center-block{
+    height: 100%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 1s ease-in-out;
+    flex-basis: 100%;
+}
+
+.about-block{
+    /*background: yellow;*/
+}
+
+.activity-block{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    align-items: center;
+    background: pink;
+}
+
+.direction-block{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    align-items: center;
+    background: darkblue;
+}
+
+.mission-block{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    align-items: center;
+    background: purple;
+}
+
+.news-block{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    align-items: center;
+    background: palegoldenrod;
+}
+li.menu-link{
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+li.menu-link:hover{
+    opacity: 0.9;
+    transition: 1s;
+}
+
+li.menu-link.active{
+    opacity: 1;
+    transition: 1s;
+}
+
+li.menu-link.active ~ .center-block{
+    transform: scale(1);
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main-heading-wrapper{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 40;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+    top: 25vh;
+}
+
+.about-left{
+    position: fixed;
+    left: 18%;
+    width: 37%;
+    display: flex;
+    padding-left: ;
+    padding: 20px;
+
+
+}
+ul.lang{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+ul.lang > li{
+    padding: 1vh;
+
+}
+ul.lang > li:hover{
+    border-bottom: 1px solid white;
+
+}
+.about-right{
+    border-left: 0.5px solid var(--main-block-borders-color);
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vh;
+    position: fixed;
+    left: 55%;
+    height: 100vh;
+}
+
+.about-right > .text{
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn-one{
+    border: 1px solid var(--main-block-borders-color);
+    border-radius: 20px;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+}
+
+.left-border.toggle{}
+
+.menu-icon{
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: lighter;
+    font-size: 12px;
+    /*transform: translateY(0%);
+    transition: transform 1s ease-out;*/
+}
+
+.control-open{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translateX(0%);
+    transition: transform 0.8s ease-in;  
+}
+
+.control-open.pull-right{
+    transform: translateX(400%);
+    transition: transform 0.2s ease-in;   
+}
+
+
+
+.control-close{
+   position: absolute;
+   top: 50%;
+   right: 40%;
+    transform: translateX(400%);
+    transition: transform 0.2s ease-in;  
+}
+
+.control-close.pull-left{
+    transform: translateX(0%);
+    transition: transform 0.8s ease-in;  
+
+}
