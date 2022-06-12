@@ -179,12 +179,42 @@ div.fourth > .burger{
     transition: transform 1s ease-out;
 
 }
+.line1, .line2{
+   transform: translateY(0%);
+    transition: transform 0.3s ease-out;
+
+}
+.burger.toggle > .line1{
+    transform: translateY(5px);
+    transition: transform 0.3s ease-out;
+}
+.burger.toggle > .line2{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
+}
+
+.burger.toggle:hover > .line1{
+    transform: translateY(5px);
+    transition: transform 0.3s ease-out;
+}
+.burger.toggle:hover > .line2{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
+}
+
+
+.burger:hover > .line1{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
+}
+.burger:hover > .line2{
+    transform: translateY(5px);
+    transition: transform 0.3s ease-out;
+}
 
 .burger-nav-active{
     transform: translateY(0%);
     transition: transform 1.5s ease-in;
-
-
 }
 .center-block{
     height: 100%;
