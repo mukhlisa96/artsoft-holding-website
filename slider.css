@@ -254,27 +254,27 @@ div.fourth > .burger{
 
     }
 .center-block{
-    height: 100%;
-    width: 100%;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+   /* height: 100%;
+    width: 100%;*/
+    max-height: 100vh;
+    min-height: 100vh;
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
     transition: transform 1s ease-in-out;
     flex-basis: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .about-block{
-    /*background: yellow;*/
 }
 
 .activity-block{
-    display: flex;
-    justify-content: center;
-    font-size: 100px;
-    text-transform: uppercase;
-    align-items: center;
-    background: pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    background-image: url(assets/img/map.jpg);
 }
 
 .direction-block{
@@ -351,6 +351,7 @@ li.menu-link.active ~ .center-block{
 .about-left{
 }
 
+
 ul.lang{
     display: flex;
     list-style: none;
@@ -364,10 +365,17 @@ ul.lang{
 }
 
 ul.lang > li{
-    padding: 1vh;
+    margin: 1vh;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 ul.lang > li:hover{
+    border-bottom: 1px solid white;
+    
+}
+.lang-item.active{
     border-bottom: 1px solid white;
 }
 
@@ -380,6 +388,8 @@ ul.lang > li:hover{
     position: fixed;
     left: 55%;
     height: 100vh;
+    position: fixed;
+    z-index: 45;
 }
 
 .about-right > .text{
@@ -387,6 +397,8 @@ ul.lang > li:hover{
     text-transform: uppercase;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    /*position: fixed;*/
+    /*z-index: 20;*/
 }
 
 .btn-one{
@@ -410,6 +422,7 @@ ul.lang > li:hover{
     text-orientation: mixed;
     font-weight: lighter;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .control-open{
@@ -526,3 +539,64 @@ ul.burger-menu-links{
     font-size: 14px;
 }
 
+.sound-visual{
+    margin-right: 10px;
+}
+
+.play-line{
+    width: 1px;
+    height: 8px;
+    background: white;
+    /*animation-name: none;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: height 0.6s ease 0s;*/
+    color: white;
+    margin-right: 0.5px;
+    display: inline-block;
+}
+.block-bg{
+    height: 100vh;
+}
+
+.activity-bg{
+    width: 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.plus-container{
+    position: relative;
+    height: 100%;
+
+}
+.plus{
+    background-color: #06ff0640;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    
+    text-align: center;
+    padding: 10px;
+    font-weight: lighter;
+    
+
+    position: absolute;
+    z-index: 1000;
+}
+
+.plus-1{
+    top: 50%;
+    left: 50%;
+}
+.plus-2{
+    top: 80%;
+    left: 50%;
+}
+
+.plus-3{
+    top: 90%;
+    left: 50%;
+}
