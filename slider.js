@@ -14,31 +14,30 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
 const navSlide = () => {
 let burger = document.querySelector('.burger');
 const nav = document.querySelector('.burger-navbar');
-const navLinks = document.querySelectorAll('.menu-links li');
+const navLinks = document.querySelectorAll('.burger-menu-links li');
 
-// leftBorder = document.querySelector('.left-border');
-// rightBorder = document.querySelector('.right-border');
 
 controlOpen = document.querySelector('.control-open');
 controlClose = document.querySelector('.control-close');
+leftMenu = document.querySelector('.left-menu');
 
 burger.addEventListener('click', () => {
 
     // toggle nav
         nav.classList.toggle('burger-nav-active');
-        // leftBorder.classList.toggle('toggle');
-        // rightBorder.classList.toggle('toggle');
-
+// burgerNavActiveElements.style.opacity = 1;
         controlOpen.classList.toggle('pull-right');
         controlClose.classList.toggle('pull-left');
 
-    // animate links
+        leftMenu.classList.toggle('disappear');
 
+
+    // animate links
         navLinks.forEach((link, index) => {
            if (link.style.animation) {
             link.style.animation = '';
            } else {
-             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.8}s`;
+             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.6}s`;
            }
         });
 
