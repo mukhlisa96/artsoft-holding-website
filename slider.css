@@ -14,9 +14,23 @@
     /*transition: 2s;*/
     transform: translateX(0%);
     transition: transform 1s ease-out;
-     transition-delay: 1s;
+    transition-delay: 1s;
 
 }
+.blacklayer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*z-index: 1;*/
+  display: block;
+  pointer-events: none;
+  background-color: rgba(41, 41, 41, 0.6);
+  opacity: 0.5;
+  transition: 0.8s;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -74,6 +88,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.logo>img{
+    height: 40px;
 }
 
 .menu{
@@ -432,7 +449,8 @@ ul.burger-menu-links{
     list-style: none;
     line-height: 1.5;
     font-size: 40px;
-
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
 }
 .burger-menu-link{
     opacity: 0;
@@ -441,24 +459,70 @@ ul.burger-menu-links{
     from{
         opacity: 0;
         transform: translate(-50px, -50px);
-    /*transition: transform 1s fade-in;  */
-
         
     }
     to{
         opacity: 1;
         transform: translate(0px, 0px);
-    /*transition: transform 1s fade-out;  */
-
     }
 }
+
+@keyframes contactInfoFade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+        
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
 
 .burger-navbar-block-3{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    max-height: 100vh;
+    height: 50vh;
+    text-align: right;
     position: fixed;
+    right: 12%;
     top: 5%;
-    right: 20%;
+    opacity: 0;
 }
+
+
+.burger-navbar-block-3 > ul {
+    list-style: none;
+    line-height: 2;
+    /*opacity: 0;*/
+    /*transform: translateX(0%);*/
+    /*opacity: 0;*/
+
+    /*animation-name: contactInfoFade;*/
+    /*animation-duration: 5s;*/
+    /*transition: transform 1s ease-out;*/
+    /*transition-delay: 1s;*/
+}
+
+.burger-navbar-block-3. > ul.disappear {
+   /* opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;*/
+}
+
+.contact-info-1{
+   /* opacity: 0;
+    transform: translateX(0%);
+    transition: transform 1s ease-out;
+     transition-delay: 1s;*/
+
+}
+.contact-info-2{
+    /*opacity: 0;*/
+    font-weight: lighter;
+    font-size: 14px;
+}
+

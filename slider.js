@@ -20,7 +20,7 @@ const navLinks = document.querySelectorAll('.burger-menu-links li');
 controlOpen = document.querySelector('.control-open');
 controlClose = document.querySelector('.control-close');
 leftMenu = document.querySelector('.left-menu');
-
+contactInfo = document.querySelector('.burger-navbar-block-3');
 burger.addEventListener('click', () => {
 
     // toggle nav
@@ -30,7 +30,14 @@ burger.addEventListener('click', () => {
         controlClose.classList.toggle('pull-left');
 
         leftMenu.classList.toggle('disappear');
+        // contactInfo.classList.toggle('disappear');
+        if (contactInfo.style.animation) {
+            contactInfo.style.animation = '';
+           } else {
+              contactInfo.style.animation = `contactInfoFade 1s ease forwards 1s`;
+           }
 
+       
 
     // animate links
         navLinks.forEach((link, index) => {
