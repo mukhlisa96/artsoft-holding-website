@@ -105,7 +105,7 @@ ul.menu-links{
     font-family: 'Jost', sans-serif;
     left: 0;
     position: fixed;
-    z-index: -1;
+    z-index: 100;
 }
 
 ul.menu-links > li{
@@ -570,10 +570,66 @@ ul.burger-menu-links{
 .plus-container{
     position: relative;
     height: 100%;
+    transform:translate(9999px);
+    opacity: 0
+}
+
+.plus-container.show{
+    transition: opacity 2s ease-in;  
+    transform:translate(23%);
+    opacity: 1;
+
+ 
+    position: fixed;
+    z-index: -1;
+    min-width: 80% !important;
+    height: 100%;
 
 }
+.plus-x{
+transform: rotate(-90deg);
+     transition: transform 0.5s ease-in;
+     background-color: white;
+     height: 10px;
+     width: 2px;
+}
+
+.plus-y{
+     background-color: white;
+     height: 10px;
+     width: 2px;
+     margin-top: -10px;
+     transition: transform 0.3s ease-in;
+
+}
+
+.plus:hover > .plus-axis > .plus-y{
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in;
+}
+.plus > .label{
+    display: none;
+    margin-left: 20px;
+}
+.plus:hover > .label{
+    display: block;
+}
+
+.plus:hover {
+    width: auto;
+    transition: transform 1s ease-in;
+
+}
+
+.plus:nth-child(odd){
+    background-color: #e31e247a;
+}
+
+.plus:nth-child(even){
+    background-color: #0771ae8a;
+}
+
 .plus{
-    background-color: #06ff0640;
     border-radius: 50px;
     height: 40px;
     width: 40px;
@@ -585,18 +641,59 @@ ul.burger-menu-links{
 
     position: absolute;
     z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
+.plus:hover{
+    /*background: red;*/
+}
 .plus-1{
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 37%;
 }
 .plus-2{
-    top: 80%;
-    left: 50%;
+    top: 13%;
+    left: 66%;
 }
 
 .plus-3{
-    top: 90%;
-    left: 50%;
+    top: 40%;
+    left: 20%;
+}
+.plus-4{
+    top: 64%;
+    left: 65%;
+}
+.plus-5{
+    top: 41%;
+    left: 66%;
+}
+
+.plus-6{
+    top: 20%;
+    left: 97%;
+}
+.plus-7{
+    top: 51%;
+    left: 99%;
+}
+.plus-8{
+    top: 25%;
+    left: 44%;
+}
+
+
+
+
+.capm-modal{
+    /*background: red;*/
+    width: 500px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    /*bottom: 0;*/
 }
