@@ -583,7 +583,9 @@ ul.burger-menu-links{
     position: fixed;
     z-index: -1;
     min-width: 80% !important;
-    height: 100%;
+    height: 90%;
+    /*background-color: darkred;*/
+    bottom: 0;
 
 }
 .plus-x{
@@ -653,20 +655,20 @@ transform: rotate(-90deg);
 }
 .plus-1{
     top: 70%;
-    left: 37%;
+    left: 40%;
 }
 .plus-2{
-    top: 13%;
-    left: 66%;
+    top: 8%;
+    left: 68%;
 }
 
 .plus-3{
-    top: 40%;
-    left: 20%;
+    top: 32%;
+    left: 14%;
 }
 .plus-4{
-    top: 64%;
-    left: 65%;
+    top: 58%;
+    left: 61%;
 }
 .plus-5{
     top: 41%;
