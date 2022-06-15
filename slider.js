@@ -1,3 +1,4 @@
+body = document.querySelector('body');
 
 const centerblockWrapper = document.querySelector('.center-block-wrapper');
 let plusContainer = document.querySelector('.plus-container');
@@ -6,10 +7,26 @@ var slideIndex = 0;
 let burger = document.querySelector('.burger');
 const nav = document.querySelector('.burger-navbar');
 
-secondBlock = document.querySelector('.lang-block');
+let secondBlock = document.querySelector('.lang-block');
 
-// let burgerToggle = document.querySelector('.burger .toggle');
+const plusBtns = document.querySelectorAll('.plus');
 
+let h2= document.querySelector('h2');
+let p = document.querySelector('p');
+
+
+
+plusBtns.forEach((pBtn, index) => {
+
+    pBtn.addEventListener('click', () => {
+        plusContainer.classList.remove('show');
+        let campImg = document.querySelector(`.camp-img-${index+1}`);
+        let campModal = document.querySelector(`.camp-modal-${index+1}`);
+
+        campImg.classList.add('show-camp-img');
+        campModal.classList.add('open');
+    });
+  });
 
 
 
@@ -19,28 +36,74 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             document.querySelector('.menu-link.active').classList.remove('active');
         }
         indicator.classList.add('active');
-        centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
         slideIndex = ind;
+        centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
+        console.log(slideIndex);
 
-        if (slideIndex==1) {
-            plusContainer.classList.add('show');
-            secondBlock.style.zIndex = -1;
+        // if (ind === 1) {
+        //     plusContainer.classList.add('show');
+        // }
+        // else{
+        //      plusContainer.classList.toggle('show');
+        // }
+            let absoluteBorder = document.querySelectorAll('.absolute-border');
+            let langItem = document.querySelector('ul.lang > li:hover');
+            let hover = document.querySelectorAll('.lang-item');
+            let burgerLine1 = document.querySelector('.line1');
+            let burgerLine2 = document.querySelector('.line2');
+            let rect = document.querySelector('rect');
+            let path = document.querySelector('path');
+            let middleLine = document.querySelector('.middle-line');
 
-            burger.addEventListener('click', () => {
-                plusContainer.classList.toggle('show');
-            });
-            
-            menuIcon.addEventListener('click', () => {
-                plusContainer.classList.toggle('show');
-            });
 
-        }
-        else{
-             plusContainer.classList.remove('show');
-             secondBlock.style.zIndex = 40;
+         if (ind === 2 || ind == 3) {
 
-        }
+            body.style.color = '#42567a';
+            document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= '#42567a';});
+            burgerLine1.style.backgroundColor = '#42567a';
+            burgerLine2.style.backgroundColor = '#42567a';
+            rect.setAttribute("stroke", "#42567a");
+            path.setAttribute("stroke", "#42567a");
+            middleLine.style.height = '65%';
 
+
+            for (let elem of hover) {
+              elem.addEventListener('mouseenter', () => {
+                elem.style.borderBottom = '1px solid #42567a'
+              })
+              elem.addEventListener('mouseleave', () => {
+                elem.style.borderBottom = ''            })
+            };
+
+            for (let elem of absoluteBorder) {
+             elem.style.borderColor = 'rgba(66, 86, 122, 0.07)';
+            };
+
+
+         }else if(ind != 2 || ind != 3){
+
+              body.style.color = 'white';
+              document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= 'white';});
+              burgerLine1.style.backgroundColor = 'white';
+              burgerLine2.style.backgroundColor = 'white';
+              middleLine.style.height = '100%';
+
+            for (let elem of hover) {
+              elem.addEventListener('mouseenter', () => {
+                elem.style.borderBottom = '1px solid white'
+              })
+              elem.addEventListener('mouseleave', () => {
+                elem.style.borderBottom = ''            })
+            };
+
+            rect.setAttribute("stroke", "#42567a");
+            path.setAttribute("stroke", "#42567a");
+
+             for (let elem of absoluteBorder) {
+             elem.style.borderColor = '#ffffff4f';
+            };
+
+         }
     });
 });
 
@@ -109,16 +172,6 @@ menuIcon.addEventListener('click', () => {
     });     
 }
 navSlide();
-
-
-// map plus icons
-let plus = document.querySelector('.plus-1');
-let secondSlide = document.querySelector('activity-block');
-plus.addEventListener('click', () => {
-    // campImg.classList.add('show-campImg');
-
-    secondSlide.style.display = 'none';
-});
 
 
 
