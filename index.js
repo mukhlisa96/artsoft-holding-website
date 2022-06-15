@@ -54,7 +54,7 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             let rect = document.querySelector('rect');
             let path = document.querySelector('path');
             let middleLine = document.querySelector('.middle-line');
-
+            let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
          if (ind === 2 || ind == 3) {
 
@@ -77,6 +77,9 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
 
             for (let elem of absoluteBorder) {
              elem.style.borderColor = 'rgba(66, 86, 122, 0.07)';
+            };
+            for (let elem of menuLinkSpan) {
+             elem.style.backgroundColor = '#42567a';
             };
 
 
@@ -101,6 +104,9 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
 
              for (let elem of absoluteBorder) {
              elem.style.borderColor = '#ffffff4f';
+            };
+            for (let elem of menuLinkSpan) {
+             elem.style.backgroundColor = '#ffffff4f';
             };
 
          }
