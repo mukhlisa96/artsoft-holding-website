@@ -228,7 +228,7 @@ $('.slick')
     $(`.slick-slide[data-slick-index="${current - 3}"]`).addClass('lt2');
   }
 
-  console.log('beforeChange', current, ':', lt2, lt1, next, gt1, gt2);
+  // console.log('beforeChange', current, ':', lt2, lt1, next, gt1, gt2);
 });
 // brands-slider-end
 
