@@ -1,5 +1,5 @@
 .center-block-wrapper{
- height: 500%;
+  height: 500%;
 }
 
 ul.menu-links{
@@ -37,7 +37,7 @@ ul.menu-links{
     height: 100%;
 }
 .profile-row-2{
- height: 70%;
+    height: 70%;
 }
 
 
@@ -237,6 +237,10 @@ ul.menu-links{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.slick span img{
+    width: 200px;
 }
 
 .slick-slide {
