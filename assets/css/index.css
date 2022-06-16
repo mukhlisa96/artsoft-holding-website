@@ -391,7 +391,7 @@ color: white;
 font-size: 40px;
 display: flex;
 justify-content: center;
-min-height: 100vh;
+min-height: 90vh;
 align-items: center;
 z-index: 2;
 position: relative;
