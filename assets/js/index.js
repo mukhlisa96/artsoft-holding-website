@@ -57,7 +57,7 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
          if (ind === 2 || ind == 3) {
-
+            nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
             body.style.color = '#42567a';
             document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= '#42567a';});
             burgerLine1.style.backgroundColor = '#42567a';
@@ -84,7 +84,7 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
 
 
          }else if(ind != 2 || ind != 3){
-
+              nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
               body.style.color = 'white';
               document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= 'white';});
               burgerLine1.style.backgroundColor = 'white';

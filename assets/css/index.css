@@ -86,6 +86,7 @@ p{
 
 ul{
      font-family: "Jost", sans-serif;
+     list-style: none;
 }
 .slider-container{
     position: relative;
