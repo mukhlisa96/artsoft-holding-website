@@ -234,3 +234,30 @@ $('.slick')
 });
 // brands-slider-end
 
+// indicators rotation slider
+
+let circles = document.querySelectorAll('.r-circle');
+let rect = document.querySelector('.rect');
+let pos = 1;
+
+
+circles.forEach((c, index)=> {
+
+
+    c.addEventListener('click', () => {
+        if(rect.style.transform){
+            rect.style.transform = '';
+        }else{
+            if(index == 0)rect.style.transform = `rotate(${90+(index*pos)}deg)`;
+            else if(index == 1)rect.style.transform = `rotate(${0+(index*pos)}deg)`;
+            else if(index == 2)rect.style.transform = `rotate(${-90+(index*pos)}deg)`;
+            else if(index == 3)rect.style.transform = `rotate(${-180+(index*pos)}deg)`;
+
+
+        }
+
+
+       
+    });
+});
+// indicators rotation slider

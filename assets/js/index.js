@@ -28,7 +28,10 @@ plusBtns.forEach((pBtn, index) => {
     });
   });
 
+body.addEventListener('mousedown', () => {
+        centerblockWrapper.style.transform = 'translateY('-20 + '%)';
 
+});
 
 document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
     indicator.addEventListener('click', function(){
@@ -38,14 +41,7 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
         indicator.classList.add('active');
         slideIndex = ind;
         centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
-        console.log(slideIndex);
 
-        // if (ind === 1) {
-        //     plusContainer.classList.add('show');
-        // }
-        // else{
-        //      plusContainer.classList.toggle('show');
-        // }
             let absoluteBorder = document.querySelectorAll('.absolute-border');
             let langItem = document.querySelector('ul.lang > li:hover');
             let hover = document.querySelectorAll('.lang-item');
@@ -99,8 +95,8 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
                 elem.style.borderBottom = ''            })
             };
 
-            rect.setAttribute("stroke", "#42567a");
-            path.setAttribute("stroke", "#42567a");
+            rect.setAttribute("stroke", "white");
+            path.setAttribute("stroke", "white");
 
              for (let elem of absoluteBorder) {
              elem.style.borderColor = '#ffffff4f';
