@@ -7,6 +7,14 @@
     <link rel="shortcut icon" href="index.ico" />
 
    
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/blockreveals/normalize.css" /> -->
+        <link rel="stylesheet" type="text/css" href="assets/css/blockreveals/demo.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/blockreveals/revealer.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/blockreveals/pater.css" /> -->
+        <script>document.documentElement.className = 'js';</script>
+
+
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/about-company.css">
     <link rel="stylesheet" type="text/css" href="assets/css/contacts.css">
@@ -25,7 +33,7 @@
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
                     <li class="burger-menu-link"><a href="about-company.html">О компании</a></li>
-                    <li class="burger-menu-link"><a href="">Деятельность</a></li>
+                    <li class="burger-menu-link"><a href="index.html#1">Деятельность</a></li>
                     <li class="burger-menu-link"><a href="brands.html">Бренды</a></li>
                     <li class="burger-menu-link"><a href="partners.html">Партнерство</a></li>
                     <li class="burger-menu-link"><a href="contacts.html">Контакты</a></li>
@@ -51,9 +59,9 @@
                  <div class="logo"><a href="index.html"><img src="assets/img/logo.svg"></a></div>
                  <div class="menu left-menu">
                      <ul class="menu-links">
-                        <li class="menu-link active"><span class="menu-link-span"></span>Общая информация</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Контакты</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Обратная связь</li>
+                        <li class="menu-link active"><span class="menu-link-span"></span><a href="#0">Общая информация</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#1">Контакты</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#2">Обратная связь</a></li>
                      </ul>
                  </div>
                 <div class="sound-control">
@@ -82,7 +90,7 @@
                 </ul>
         <div class="carousel">
             <div class="center-block-wrapper">
-                <div class="center-block about-block">
+                <div class="center-block about-block" id="0">
                     <div class="first-block-bg">   
                         <video autoplay muted loop id="myVideo">
                           <source src="assets/video/bg.mp4" type="video/mp4">
@@ -118,7 +126,7 @@
                      </div>
                 </div>
 
-                <div class="central-block contacts-middle-block">
+                <div class="center-block contacts-middle-block" id="1">
                     <div class="additional-info info-top" >
                              <div class="align-left">
                                 <h4>ГЛАВНЫЙ ОФИС: ООО «ART SOFT HOLDING»</h4>
@@ -147,7 +155,7 @@
                             </div>
                         </div>
                 </div>
- <div class="central-block feedback-block">
+ <div class="center-block feedback-block" id="2">
     <div class="feedback-wrapper">
         <div></div>
         <div class="feedback-middle">
@@ -157,9 +165,16 @@
             </div>
             <div class="feedback-form">
                 <div class="feedback-circle-wrapper">
+                    <div class="circle-text">Заполнить форму</div>
                 <div class="feedback-circle">
+                    <button class="btn--form-open little-circle"><i class="fa fa-angle-right"></i></button>
+                    
+                
                 </div>
-                <div class="litte-circle"><i class="fa fa-angle-right"></i></div>
+               <script type="text/javascript">
+                   
+
+               </script>
                 </div>
                 <div class="feedback-contact-info">
                     <div style="font-weight: lighter;">Контакты для связи</div>
@@ -203,12 +218,138 @@
                  </div>
 
                  <div class="o-icon">
-                     <svg width="15" height="34" viewBox="0 0 22 34" xmlns="http://www.w3.org/2000/svg"><rect class="rect" x=".75" y=".75" width="20.5" height="32.5" rx="9.25" fill="transparent" stroke="white"></rect><path d="M11 8v8" fill="transparent" stroke="white"></path></svg>
+                     <svg width="15" height="34" viewBox="0 0 22 34" xmlns="http://www.w3.org/2000/svg"><rect x=".75" y=".75" width="20.5" height="32.5" rx="9.25" fill="transparent" stroke="white"></rect><path d="M11 8v8" fill="transparent" stroke="white"></path></svg>
                  </div>
             </div>
         </div>
     </div>
+
+
+
+         <section class="form">
+                <button class="btn btn--close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+                <form class="form__inner flexy flexy--center" action="">
+                    <h3 class="form__section form__section--title">Форма для связи</h3>
+                    
+
+                    <div class="form__section">
+
+                        <p>Заполните форму обратной связи, если у вас остались вопросы или пожелания. Мы свяжемся с вами в ближайшее время</p>
+
+                            <br><br> <br><br> 
+                         <p><input type="checkbox" name=""> Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных</p>
+                    </div>
+                   
+                   
+                    
+                    <div class="form__section form__section--right">
+                         <div class="form__section">
+                        <input class="form__input" placeholder="ФИО" type="text" name="name">
+                    </div>
+                    <div class="form__section">
+                        <input class="form__input" placeholder="Телефон" type="email" name="email">
+                    </div>
+                    <div class="form__section">
+                        <input class="form__input" placeholder="Компания" type="password" name="password">
+                    </div>
+
+                    <div class="form__section">
+                        <input class="form__input" placeholder="Почта" type="password" name="password">
+                    </div>
+
+                    <div class="form__section">
+                        <textarea class="form__input" placeholder="Компания" type="password" name="password"></textarea>
+                    </div> 
+                        <button class="btn btn--default form__close my_form__close" id="my_form_close" style="margin-right: 20px;">Закрыть</button>
+                        <button class="btn btn--default">Отправить</button>
+
+
+
+                    </div>
+                </form>
+            </section>
+
+
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <!-- <script src="assets/js/index.js"></script> -->
 <script src="assets/js/contacts.js"></script>
+<script src="assets/js/blockreveals/anime.min.js"></script>
+<script src="assets/js/blockreveals/main.js"></script>
+        <script>
+        (function() {
+            var formEl = document.querySelector('section.form'),
+                revealer = new RevealFx(formEl),
+                closeCtrl = formEl.querySelector('.form__close');
+
+            document.querySelector('.btn--form-open').addEventListener('click', function() {
+                revealer.reveal({
+                    bgcolor: '#8f40f1',
+                    direction: 'bt',
+                    duration: 600,
+                    onCover: function(contentEl, revealerEl) {
+                        formEl.classList.add('form--open');
+                        contentEl.style.opacity = 1;
+                    },
+                    onComplete: function() {
+                        closeCtrl.addEventListener('click', closeForm);
+                    }
+                });
+            });
+
+            function closeForm() {
+                closeCtrl.removeEventListener('click', closeForm);
+                formEl.classList.remove('form--open');
+                revealer.reveal({
+                    bgcolor: '#8f40f1',
+                    direction: 'tb',
+                    duration: 600, 
+                    onCover: function(contentEl, revealerEl) {
+                        formEl.classList.remove('form--open');
+                        contentEl.style.opacity = 0;
+                    }
+                });
+            }
+
+            formEl.addEventListener('submit', function(ev) {ev.preventDefault();});
+        })();
+        </script>
+
+        <script type="text/javascript">
+    
+    $(function () {
+            var body = $("body");
+            var abBorder = $(".absolute-border");
+            var burgerLine = $(".line");
+            var svgRect = $("rect");
+            var svgPath = $("path");
+            var navbarBg = $(".burger-navbar");
+            var menuLinkSpan = $(".menu-link-span");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 500) {
+                   body.removeClass('light-font').addClass("dark-font");
+                   burgerLine.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   abBorder.removeClass('light-border').addClass("dark-border");
+                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
+                   svgRect.attr("stroke", "#42567a");
+                   svgPath.attr("stroke", "#42567a");
+                } else {
+                    body.removeClass('dark-font').addClass("light-font");
+                    burgerLine.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                    abBorder.removeClass('dark-border').addClass("light-border");
+                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
+                    svgRect.attr("stroke", "white");
+                    svgPath.attr("stroke", "white");
+
+                }
+            });
+        });
+
+
+</script>
 </html>

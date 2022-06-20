@@ -14,35 +14,7 @@ const plusBtns = document.querySelectorAll('.plus');
 let h2= document.querySelector('h2');
 let p = document.querySelector('p');
 
-
-
-plusBtns.forEach((pBtn, index) => {
-
-    pBtn.addEventListener('click', () => {
-        plusContainer.classList.remove('show');
-        let campImg = document.querySelector(`.camp-img-${index+1}`);
-        let campModal = document.querySelector(`.camp-modal-${index+1}`);
-
-        campImg.classList.add('show-camp-img');
-        campModal.classList.add('open');
-    });
-  });
-
-body.addEventListener('mousedown', () => {
-        centerblockWrapper.style.transform = 'translateY('-20 + '%)';
-
-});
-
-document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
-    indicator.addEventListener('click', function(){
-        if(document.querySelector('.menu-link.active')){
-            document.querySelector('.menu-link.active').classList.remove('active');
-        }
-        indicator.classList.add('active');
-        slideIndex = ind;
-        centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
-
-            let absoluteBorder = document.querySelectorAll('.absolute-border');
+let absoluteBorder = document.querySelectorAll('.absolute-border');
             let langItem = document.querySelector('ul.lang > li:hover');
             let hover = document.querySelectorAll('.lang-item');
             let burgerLine1 = document.querySelector('.line1');
@@ -52,8 +24,18 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             let middleLine = document.querySelector('.middle-line');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
-         if (ind === 2 || ind == 3) {
+
+$(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              let ind=target.selector;
+              ind = ind.replace('#', '');
+              console.log(ind);
+        if (ind ==2 || ind == 3) {
             nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
+
             body.style.color = '#42567a';
             document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= '#42567a';});
             burgerLine1.style.backgroundColor = '#42567a';
@@ -79,8 +61,9 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             };
 
 
-         }else if(ind != 2 || ind != 3){
+         }else if(ind != 2 || ind != 3 ){
               nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
+
               body.style.color = 'white';
               document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= 'white';});
               burgerLine1.style.backgroundColor = 'white';
@@ -106,13 +89,35 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             };
 
          }
+
+
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+
+        
+plusBtns.forEach((pBtn, index) => {
+
+    pBtn.addEventListener('click', () => {
+        plusContainer.classList.remove('show');
+        let campImg = document.querySelector(`.camp-img-${index+1}`);
+        let campModal = document.querySelector(`.camp-modal-${index+1}`);
+
+        campImg.classList.add('show-camp-img');
+        campModal.classList.add('open');
     });
-});
+  });
+
+
 
 // burger nav animation
 const navSlide = () => {
-// let burger = document.querySelector('.burger');
-// const nav = document.querySelector('.burger-navbar');
 const navLinks = document.querySelectorAll('.burger-menu-links li');
 
 
@@ -174,8 +179,6 @@ menuIcon.addEventListener('click', () => {
     });     
 }
 navSlide();
-
-
 
 
 

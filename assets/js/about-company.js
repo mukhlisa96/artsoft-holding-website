@@ -14,39 +14,7 @@ const plusBtns = document.querySelectorAll('.plus');
 let h2= document.querySelector('h2');
 let p = document.querySelector('p');
 
-
-
-plusBtns.forEach((pBtn, index) => {
-
-    pBtn.addEventListener('click', () => {
-        plusContainer.classList.remove('show');
-        let campImg = document.querySelector(`.camp-img-${index+1}`);
-        let campModal = document.querySelector(`.camp-modal-${index+1}`);
-
-        campImg.classList.add('show-camp-img');
-        campModal.classList.add('open');
-    });
-  });
-
-
-
-document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
-    indicator.addEventListener('click', function(){
-        if(document.querySelector('.menu-link.active')){
-            document.querySelector('.menu-link.active').classList.remove('active');
-        }
-        indicator.classList.add('active');
-        slideIndex = ind;
-        centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
-        console.log(slideIndex);
-
-        // if (ind === 1) {
-        //     plusContainer.classList.add('show');
-        // }
-        // else{
-        //      plusContainer.classList.toggle('show');
-        // }
-            let absoluteBorder = document.querySelectorAll('.absolute-border');
+let absoluteBorder = document.querySelectorAll('.absolute-border');
             let langItem = document.querySelector('ul.lang > li:hover');
             let hover = document.querySelectorAll('.lang-item');
             let burgerLine1 = document.querySelector('.line1');
@@ -56,7 +24,16 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             let middleLine = document.querySelector('.middle-line');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
-         if (ind ===1 || ind === 3 || ind===4 || ind===5) {
+
+$(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              let ind=target.selector;
+              ind = ind.replace('#', '');
+              // console.log(ind);
+        if (ind ==1 || ind == 3 || ind==5) {
             nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
 
             body.style.color = '#42567a';
@@ -84,7 +61,7 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             };
 
 
-         }else if(ind != 1 || ind != 3 || ind!=4 || ind!=5){
+         }else if(ind != 1 || ind != 3 || ind!=5){
               nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
 
               body.style.color = 'white';
@@ -101,8 +78,8 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
                 elem.style.borderBottom = ''            })
             };
 
-            rect.setAttribute("stroke", "#42567a");
-            path.setAttribute("stroke", "#42567a");
+            rect.setAttribute("stroke", "white");
+            path.setAttribute("stroke", "white");
 
              for (let elem of absoluteBorder) {
              elem.style.borderColor = '#ffffff4f';
@@ -112,13 +89,35 @@ document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
             };
 
          }
+
+
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+
+        
+plusBtns.forEach((pBtn, index) => {
+
+    pBtn.addEventListener('click', () => {
+        plusContainer.classList.remove('show');
+        let campImg = document.querySelector(`.camp-img-${index+1}`);
+        let campModal = document.querySelector(`.camp-modal-${index+1}`);
+
+        campImg.classList.add('show-camp-img');
+        campModal.classList.add('open');
     });
-});
+  });
+
+
 
 // burger nav animation
 const navSlide = () => {
-// let burger = document.querySelector('.burger');
-// const nav = document.querySelector('.burger-navbar');
 const navLinks = document.querySelectorAll('.burger-menu-links li');
 
 
@@ -183,6 +182,9 @@ navSlide();
 
 
 
+
+
+
 // brands-slider
 
 $('.slick')
@@ -237,7 +239,7 @@ $('.slick')
 // indicators rotation slider
 
 let circles = document.querySelectorAll('.r-circle');
-let rect = document.querySelector('.rect');
+let rect1 = document.querySelector('.rect');
 let pos = 1;
 
 
@@ -245,13 +247,13 @@ circles.forEach((c, index)=> {
 
 
     c.addEventListener('click', () => {
-        if(rect.style.transform){
-            rect.style.transform = '';
+        if(rect1.style.transform){
+            rect1.style.transform = '';
         }else{
-            if(index == 0)rect.style.transform = `rotate(${90+(index*pos)}deg)`;
-            else if(index == 1)rect.style.transform = `rotate(${0+(index*pos)}deg)`;
-            else if(index == 2)rect.style.transform = `rotate(${-90+(index*pos)}deg)`;
-            else if(index == 3)rect.style.transform = `rotate(${-180+(index*pos)}deg)`;
+            if(index == 0)rect1.style.transform = `rotate(${90+(index*pos)}deg)`;
+            else if(index == 1)rect1.style.transform = `rotate(${0+(index*pos)}deg)`;
+            else if(index == 2)rect1.style.transform = `rotate(${-90+(index*pos)}deg)`;
+            else if(index == 3)rect1.style.transform = `rotate(${-180+(index*pos)}deg)`;
 
 
         }
@@ -261,3 +263,165 @@ circles.forEach((c, index)=> {
     });
 });
 // indicators rotation slider
+
+
+circleNext = document.querySelector('.circle-next');
+circlePrev = document.querySelector('.circle-prev');
+let dot1 = document.querySelector(".c-1");
+let dot2 = document.querySelector(".c-2");
+let dot3 = document.querySelector(".c-3");
+let dot4 = document.querySelector(".c-4");
+
+currentCircleSlideIndex = 1;
+
+rRow = document.querySelector(".r-row");
+var el = document.querySelector(".rect");
+
+var st = window.getComputedStyle(el, null);
+var angle;
+
+circleNext.addEventListener('click', () => {
+
+    if(currentCircleSlideIndex<=4){ 
+        circleNext.disable = false;
+        rect1.style.transform = `rotate(${currentCircleSlideIndex*90}deg)`;
+        // rRow.style.transform = `rotate(-90deg)`;
+        currentCircleSlideIndex++;
+        // angle = getMyAngle(st);
+
+
+          let doot1 = dot1.getBoundingClientRect();
+          let doot2 = dot2.getBoundingClientRect();
+          let doot3 = dot3.getBoundingClientRect();
+          let doot4 = dot4.getBoundingClientRect();
+          let dotLabel = document.querySelector(".r-circle-label");
+          // let document.querySelector(".active-dot-view") = document.querySelector(".active-dot-view");
+          // console.log("1--"+Math.round(doot1.x) +" "+Math.round(doot1.y));
+          // console.log("2--"+Math.round(doot2.x) +" "+Math.round(doot2.y));
+          // console.log("3--"+Math.round(doot3.x) +" "+Math.round(doot3.y));
+          // console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
+
+
+if(Math.round(doot1.x)==504 && Math.round(doot1.y)==119){
+    dot1.classList.add('active-dot');
+    dotLabel.innerHTML = "Молочные продукты";
+
+}else{
+    dot1.classList.remove('active-dot');
+
+}
+
+
+if(Math.round(doot2.x)==504 && Math.round(doot2.y)==119){
+    dot2.classList.add('active-dot');
+    dotLabel.innerHTML = "Мясопереработка";
+
+
+}else{
+    dot2.classList.remove('active-dot');
+
+}
+
+
+if(Math.round(doot3.x)==504 && Math.round(doot3.y)==119){
+    dot3.classList.add('active-dot');
+    dotLabel.innerHTML = "Ткани";
+
+
+}else{
+    dot3.classList.remove('active-dot');
+
+}
+
+
+if(Math.round(doot4.x)==504 && Math.round(doot4.y)==119){
+    dot4.classList.add('active-dot');
+    dotLabel.innerHTML = "Назиания продукта 4";
+
+
+}else{
+    dot4.classList.remove('active-dot');
+
+}
+
+
+    }else{ 
+        
+        circleNext.disable = true;
+        currentCircleSlideIndex=1;
+    }
+    
+});
+
+circlePrev.addEventListener('click', () => {
+     if(currentCircleSlideIndex<=4){ 
+        circlePrev.disable = false;
+        rect1.style.transform = `rotate(${currentCircleSlideIndex* -90}deg)`;
+        rRow.style.transform = `rotate(90deg);`
+        currentCircleSlideIndex++;
+        angle = getMyAngle(st);
+        // console.log('prev'+angle);
+        makeDotActive(angle);
+    }else{ 
+         circlePrev.disable = true;
+        currentCircleSlideIndex=1;
+    }
+});
+
+
+
+// ****************************
+
+
+function getMyAngle(st){
+var tr = st.getPropertyValue("-webkit-transform") ||
+         st.getPropertyValue("-moz-transform") ||
+         st.getPropertyValue("-ms-transform") ||
+         st.getPropertyValue("-o-transform") ||
+         st.getPropertyValue("transform") ||
+         "FAIL";
+
+
+
+var values = tr.split('(')[1].split(')')[0].split(',');
+var a = values[0];
+var b = values[1];
+var c = values[2];
+var d = values[3];
+
+var scale = Math.sqrt(a*a + b*b);
+
+
+var sin = b/scale;
+
+var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+return angle;
+
+}
+
+function makeDotActive(angle){
+if(angle==90){
+    dot1.classList.add('active-dot');
+}else{
+    dot1.classList.remove('active-dot');
+}
+
+}
+
+
+// function getCircleCordinates(){
+//     let elem = document.querySelector('div');
+//     let rect = elem.getBoundingClientRect();
+//     console.log("x: "+ rect.x);
+//     console.log("y: "+ rect.y);
+
+// }
+
+ // let elem = document.querySelector('.c-1');
+ // let elem = document.querySelector('div');
+ // let elem = document.querySelector('div');
+ // let elem = document.querySelector('div');
+
+    // let doot = dot1.getBoundingClientRect();
+    // console.log("x: "+ doot.x);
+    // console.log("y: "+ doot.y);

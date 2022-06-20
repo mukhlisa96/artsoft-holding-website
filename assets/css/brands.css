@@ -38,7 +38,7 @@ ul.lang > li:hover {
     padding-top: 10px;
 }
 .brands-label{
-    position: fixed;
+    position: absolute;
     top: 40vh;
     left: 39vw;
     z-index: 2;

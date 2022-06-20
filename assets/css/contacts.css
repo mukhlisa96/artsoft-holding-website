@@ -105,17 +105,16 @@
     border: 1px solid #9c93db;
     border-radius: 50%;
 }
-.litte-circle{
+.little-circle{
     height: 30px;
     width: 30px;
     border: 1px solid #9c93db;
     border-radius: 50%;
     text-align: center;
-    line-height: 1.8;
-
-    position: absolute;
-    top: 48%;
-    right: 14%;
+    line-height: 1.7;
+    position: relative;
+    top: 42%;
+    left: 8%;
     background: #e8ebf1;
 }
 .feedback-contact-info{
@@ -124,4 +123,19 @@
 }
 .feedback-form{
     padding-left: 40px;
+}
+.btn--form-open {
+ /* background: none;
+  border: none;*/
+  /*color: inherit;*/
+  }
+
+.circle-text{
+    font-size: 14px;
+    position: relative;
+    top: 29%;
+    left: 40%;
+    width: 100px;
+    text-align: center;
+    line-height: 1.8;
 }

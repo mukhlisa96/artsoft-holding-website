@@ -24,7 +24,7 @@
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
                     <li class="burger-menu-link"><a href="about-company.html">О компании</a></li>
-                    <li class="burger-menu-link"><a href="">Деятельность</a></li>
+                    <li class="burger-menu-link"><a href="index.html#1">Деятельность</a></li>
                     <li class="burger-menu-link"><a href="brands.html">Бренды</a></li>
                     <li class="burger-menu-link"><a href="partners.html">Партнерство</a></li>
                     <li class="burger-menu-link"><a href="contacts.html">Контакты</a></li>
@@ -50,13 +50,13 @@
                  <div class="logo"><a href="index.html"><img src="assets/img/logo.svg"></a></div>
                  <div class="menu left-menu">
                      <ul class="menu-links">
-                        <li class="menu-link active"><span class="menu-link-span"></span>О компании</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Профиль</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Показатели</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>История</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>География</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Бренды</li>
-                        <li class="menu-link"><span class="menu-link-span"></span>Каталог продукции</li>
+                        <li class="menu-link active"><span class="menu-link-span"></span><a href="#0">О компании</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#1">Профиль</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#2">Показатели</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#3">История</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#4">География</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#5">Бренды</a></li>
+                        <li class="menu-link"><span class="menu-link-span"></span><a href="#6">Каталог продукции</a></li>
                      </ul>
                  </div>
                 <div class="sound-control">
@@ -85,7 +85,7 @@
                 </ul>
         <div class="carousel">
             <div class="center-block-wrapper">
-                <div class="center-block about-block">
+                <div class="center-block about-block" id="0">
                     <div class="first-block-bg">   
                         <video autoplay muted loop id="myVideo">
                           <source src="assets/video/bg.mp4" type="video/mp4">
@@ -102,17 +102,19 @@
                          </div>
                      </div>
                 </div>
-                <div class="center-block profile-block light-block">
+                <div class="center-block profile-block light-block" id="1">
                     <div class="profile-wrapper">
                         <div class="profile-row-1">
                             <h2>Международный агрохолдинг <br>замкнутого цикла</h2>
+                            
                             <div class="circle-video">
-                                <video autoplay muted loop id="circle-video-inner">
-                                  <source src="assets/video/bg.mp4" type="video/mp4">
-                                </video>
                                 <div class="play-btn">
                                     <i class="fa fa-play"></i>
                                 </div>
+                                <video autoplay muted loop id="circle-video-inner">
+                                  <source src="assets/video/bg.mp4" type="video/mp4">
+                                </video>
+                                
                             </div>
                         </div>
                         
@@ -140,99 +142,53 @@
                     </div><!-- proile-wrapper-end -->
                 </div><!-- proile-end -->
                 
-                <div class="center-block statistics-block light-block">
+                <div class="center-block statistics-block light-block" id="2">
                     <div class="statistics-wrapper">
-                        <i class="fa fa-check central-circle-check"></i>
-                        
-                        <!-- <div class="dot-wrapper">
-                            <div class="circle-dot dot-1">01</div>
-                            <div class="dot-label">Название продуета</div>
-                        </div>
 
-                        <div class="dot-wrapper">
-                            <div class="circle-dot dot-2">02</div>
-                            <div class="dot-label">Название продуета</div>
-                        </div>
-
-                        <div class="dot-wrapper">
-                            <div class="circle-dot dot-3">03</div>
-                            <div class="dot-label">Название продуета</div>
-                        </div>
-
-                        <div class="dot-wrapper">
-                            <div class="circle-dot dot-4">04</div>
-                            <div class="dot-label">Название продуета</div>
-                        </div>
- -->
-
-<style type="text/css">
-    .rect{
-        height: 430px;
-        width: 430px;
-      
-            transform: rotate(0deg);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: 1s ease-in;
-
-            position: absolute;
-
-            top: 43%;
-            left: 36%;
-            z-index: 2;
-
-    }
-    .r-row{
-        display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-    }
-
-.r-row-2{
-    flex-direction: row-reverse;
-}
-    .r-circle{
-        background: lightblue;
-        margin: 20px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
-<div class="rect">
-
-<div class="r-row r-row-1">
-    <div class="r-circle c-1">01</div>
-    <div class="r-circle c-2">02</div>
-</div>
-
-<div class="r-row r-row-2">
-    <div class="r-circle c-3">03</div>
-    <div class="r-circle c-4">04</div>
-</div>
-
-</div>
-
-
-                        <div class="circle-wrapper">
-                        <div class="central-circle">
-                            <div class="circle-number">100</div>
-                            <div class="circle-label">тыс.тон</div>
-                        </div>
-                        </div>
-                       <!-- <img  class="diagram-img" src="assets/img/diagram.png"> -->
-                       <div class="circle-control">
-                           <div class="circle-prev"><i class="fa fa-angle-left"></i></div>
-                           <div class="circle-next"><i class="fa fa-angle-right"></i></div>
+                        <div class="circle-control">
+                            04/04
+                           <button class="circle-prev"><i class="fa fa-angle-left"></i></button>
+                           <button class="circle-next"><i class="fa fa-angle-right"></i></button>
                        </div>
+
+                        
+                        <div class="rect">
+                            <div class="r-row r-row-1">
+                                <div class="r-circle c-1 active-dot">
+                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                </div>
+
+                                <div class="r-circle c-2">
+                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="r-row r-row-2">
+                                <div class="r-circle c-3">
+                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="r-circle c-4">
+                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="active-dot-view"></div> -->
+                            <div class="r-circle-label">
+                                Молочные продукты
+                            </div>
+
+                            <div class="central-circle">
+                                <i class="fa fa-check central-circle-check"></i>
+                                <div class="circle-stat">
+                                    <div class="circle-number">100</div>
+                                    <div class="circle-label">тыс.тон</div>
+                                </div>
+                            </div>
+                       
                     </div>
                 </div>
-                <div class="center-block history-block">
+                <div class="center-block history-block" id="3">
                     <div class="x-line"></div>
                     <h2 class="h-title">История компании</h2>
 
@@ -274,7 +230,7 @@
 
                     </div>
                 </div>
-                <div class="center-block geography-block">
+                <div class="center-block geography-block" id="4">
                     <div class="geography-wrapper">
                         <div class="geography-row-1">
                             <div class="geography-h2"><h2>География рынков <br>продаж</h2></div>
@@ -294,7 +250,7 @@
 
                     </div>
                 </div>
-                <div class="center-block brands-block">
+                <div class="center-block brands-block" id="5">
                     <div class="brands-block-container">
                     <div class="brands-wrapper">
                         <div class="heading-wrapper">
@@ -307,9 +263,7 @@
                     </div>
 
                     <div class="brands-slider-container">
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                        <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"/>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+                       
                         
                         <div class="slick">
                             <div>
@@ -377,7 +331,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="center-block products-block">
+                <div class="center-block products-block" id="6">
                     
                    <div class="products-wrapper">
                        <a href="booklet/booklet.html"><div class="products-wrapper-item">Название категории</div>
@@ -422,5 +376,73 @@
     </div>
 </body>
 <!-- <script src="assets/js/index.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
 <script src="assets/js/about-company.js"></script>
+<script type="text/javascript">
+     $(function () {
+            var body = $("body");
+            var abBorder = $(".absolute-border");
+            var burgerLine = $(".line");
+            var svgRect = $("rect");
+            var svgPath = $("path");
+            var navbarBg = $(".burger-navbar");
+            var menuLinkSpan = $(".menu-link-span");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+  
+                if (scroll <= 500) {
+                    body.removeClass('dark-font').addClass("light-font");
+                    burgerLine.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                     abBorder.removeClass('dark-border').addClass("light-border");
+                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
+                    svgRect.attr("stroke", "white");
+                    svgPath.attr("stroke", "white");
+                 
+                 }else if(scroll>=500 && scroll<=1100) {
+                   
+                   body.removeClass('light-font').addClass("dark-font");
+                   burgerLine.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   abBorder.removeClass('light-border').addClass("dark-border");
+                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
+                   svgRect.attr("stroke", "#42567a");
+                   svgPath.attr("stroke", "#42567a");
+ 
+                }else if(scroll>=1100 && scroll<=1800){
+                     body.removeClass('dark-font').addClass("light-font");
+                    burgerLine.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                     abBorder.removeClass('dark-border').addClass("light-border");
+                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
+                    svgRect.attr("stroke", "white");
+                    svgPath.attr("stroke", "white");
+                }else if(scroll>=1800 && scroll<=2500){
+                    body.removeClass('light-font').addClass("dark-font");
+                   burgerLine.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   abBorder.removeClass('light-border').addClass("dark-border");
+                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
+                   svgRect.attr("stroke", "#42567a");
+                   svgPath.attr("stroke", "#42567a");
+                }else if(scroll>=3600){
+                     body.removeClass('dark-font').addClass("light-font");
+                    burgerLine.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                     abBorder.removeClass('dark-border').addClass("light-border");
+                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
+                    svgRect.attr("stroke", "white");
+                    svgPath.attr("stroke", "white");
+                }
+
+               
+            });
+        });
+</script>
 </html>

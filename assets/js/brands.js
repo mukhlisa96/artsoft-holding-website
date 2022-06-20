@@ -14,8 +14,33 @@ const plusBtns = document.querySelectorAll('.plus');
 let h2= document.querySelector('h2');
 let p = document.querySelector('p');
 
+let absoluteBorder = document.querySelectorAll('.absolute-border');
+            let langItem = document.querySelector('ul.lang > li:hover');
+            let hover = document.querySelectorAll('.lang-item');
+            let burgerLine1 = document.querySelector('.line1');
+            let burgerLine2 = document.querySelector('.line2');
+            let rect = document.querySelector('rect');
+            let path = document.querySelector('path');
+            let middleLine = document.querySelector('.middle-line');
+            let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
 
+$(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                 if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+
+        
 plusBtns.forEach((pBtn, index) => {
 
     pBtn.addEventListener('click', () => {
@@ -29,30 +54,6 @@ plusBtns.forEach((pBtn, index) => {
   });
 
 
-
-document.querySelectorAll('.menu-link').forEach(function(indicator, ind){
-    indicator.addEventListener('click', function(){
-        if(document.querySelector('.menu-link.active')){
-            document.querySelector('.menu-link.active').classList.remove('active');
-        }
-        indicator.classList.add('active');
-        slideIndex = ind;
-        centerblockWrapper.style.transform = 'translateY('+ (ind) * -20 + '%)';
-        console.log(slideIndex);
-
-            let absoluteBorder = document.querySelectorAll('.absolute-border');
-            let langItem = document.querySelector('ul.lang > li:hover');
-            let hover = document.querySelectorAll('.lang-item');
-            let burgerLine1 = document.querySelector('.line1');
-            let burgerLine2 = document.querySelector('.line2');
-            let rect = document.querySelector('rect');
-            let path = document.querySelector('path');
-            let middleLine = document.querySelector('.middle-line');
-            let menuLinkSpan = document.querySelectorAll('.menu-link-span');
-
-
-    });
-});
 
 // burger nav animation
 const navSlide = () => {
@@ -120,6 +121,9 @@ navSlide();
 
 
 
+
+
+
 // brands-slider
 
 $('.slick')
@@ -171,3 +175,30 @@ $('.slick')
 });
 // brands-slider-end
 
+// indicators rotation slider
+
+let circles = document.querySelectorAll('.r-circle');
+let rect1 = document.querySelector('.rect');
+let pos = 1;
+
+
+circles.forEach((c, index)=> {
+
+
+    c.addEventListener('click', () => {
+        if(rect1.style.transform){
+            rect1.style.transform = '';
+        }else{
+            if(index == 0)rect1.style.transform = `rotate(${90+(index*pos)}deg)`;
+            else if(index == 1)rect1.style.transform = `rotate(${0+(index*pos)}deg)`;
+            else if(index == 2)rect1.style.transform = `rotate(${-90+(index*pos)}deg)`;
+            else if(index == 3)rect1.style.transform = `rotate(${-180+(index*pos)}deg)`;
+
+
+        }
+
+
+       
+    });
+});
+// indicators rotation slider

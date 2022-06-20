@@ -1,7 +1,8 @@
 .p-bottom{
-    position: fixed;
-    right: 10%;
-    top: 80vh;
+    position: relative;
+    width: 400px;
+    left: 56%;
+    bottom: 5%;
 }
 
 

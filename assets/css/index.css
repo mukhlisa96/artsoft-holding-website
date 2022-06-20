@@ -1,7 +1,22 @@
 
 :root {
   --main-block-borders-color: rgb(255 255 255 / 31%);
-  --body-font-color: white;
+  --body-font-color: #fff;
+  scrollbar-width: none
+}
+
+body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+     scrollbar-width: none;
+     font-family: "Jost", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+     scrollbar-width: none;
 }
 .left-menu.disappear{
     /*opacity: 0;*/
@@ -41,7 +56,7 @@
     /*z-index: -1;*/
     display: block;
     pointer-events: none;
-    z-index: 1;
+    z-index: 5;
     border-left-style: none !important;
     border-top-style: none !important;
     border-bottom-style: none !important;
@@ -74,7 +89,7 @@ body{
     height: 100vh;
     font-weight: 700;
     color: var(--body-font-color);
-    overflow-y:hidden;
+    /*overflow-y:hidden;*/
     overflow-x:hidden;
 }
 
@@ -90,7 +105,7 @@ ul{
 }
 .slider-container{
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-width: 100vw;
     height: 100vh;
 }
@@ -103,7 +118,7 @@ ul{
     width: 16%;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    z-index: 5;
 
     display: flex;
     flex-direction: column;
@@ -168,7 +183,7 @@ ul.menu-links:nth-child(1){
 .menu-link-span{
     display: inline-block;
     width: 20px;
-    background-color: white;
+    background-color: #fff;
     height: 1px;
     margin: 5px;
 }
@@ -188,7 +203,7 @@ ul.menu-links:nth-child(1){
 .right-sidebar{
     height: 100vh;
     width: 8%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;
@@ -220,7 +235,7 @@ div.fourth > .burger, .mobile-burger{
     width: 40px;
     height: 1px;
     margin: 5px;
-    background-color: white;
+    background-color: #fff;
 }
 
 
@@ -245,21 +260,20 @@ div.fourth > .burger, .mobile-burger{
     /*background: blue;*/
     display: flex;
     flex-direction: column;
-    height: 500%;
+    /*height: 400%;*/
     transition: all 1.5s;
     z-index: 0;
 }
 
 .burger-navbar{
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     background: rgb(137, 167, 223) none repeat scroll 0% 0%;
     display: flex;
     flex-direction: column;
-    height: 500%;
-    z-index: 1;
+    z-index: 4;
     transform: translateY(-100%);
     transition: transform 1s ease-out;
 
@@ -318,7 +332,7 @@ div.fourth > .burger, .mobile-burger{
     /*background-size: cover;*/
     /*background-position: center center;*/
     transition: transform 1s ease-in-out;
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
     margin: 0;
     padding: 0;
 }
@@ -347,7 +361,7 @@ div.fourth > .burger, .mobile-burger{
 }
 
 .news-block{
-     background-color: white;
+     background-color: #fff;
     color: inherit;
     display: flex;
     flex-direction: column;
@@ -380,7 +394,7 @@ li.menu-link.active ~ .center-block{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -427,11 +441,11 @@ ul.lang > li{
 }
 
 ul.lang > li:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
     
 }
 .lang-item.active{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
 }
 
 .about-right{
@@ -513,7 +527,7 @@ ul.lang > li:hover{
 ul.burger-menu-links{
     position: fixed;
     left: 20%;
-    top: 5%;
+    top: 20%;
     list-style: none;
     line-height: 1.5;
     font-size: 40px;
@@ -557,7 +571,7 @@ ul.burger-menu-links{
     text-align: right;
     position: fixed;
     right: 12%;
-    top: 5%;
+    top: 20%;
     opacity: 0;
 }
 
@@ -601,13 +615,13 @@ ul.burger-menu-links{
 .play-line{
     width: 1px;
     height: 8px;
-    background: white;
+    background: #fff;
     /*animation-name: none;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     transition: height 0.6s ease 0s;*/
-    /*color: white;*/
+    /*color: #fff;*/
     margin-right: 0.5px;
     display: inline-block;
 }
@@ -636,13 +650,13 @@ ul.burger-menu-links{
 .plus-x{
 transform: rotate(-90deg);
      transition: transform 0.5s ease-in;
-     background-color: white;
+     background-color: #fff;
      height: 10px;
      width: 2px;
 }
 
 .plus-y{
-     background-color: white;
+     background-color: #fff;
      height: 10px;
      width: 2px;
      margin-top: -10px;
@@ -862,3 +876,40 @@ margin-left: 80px;
  .mobile-header{
     display: none;
  }
+
+
+/*.center-block{
+    position: relative;
+    transform: translateY(1px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.center-block.active-window{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 2s ease;
+
+}*/
+
+@keyframes scrollFade {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+.dark-font{
+    color: #42567a;
+}
+
+.light-font{
+    color: #fff;
+}
+
+.dark-bg{background-color: #42567a;}
+.light-bg{background-color: #fff;}
+
+.blue-bg{background-color: rgb(137, 167, 223) none repeat scroll 0% 0%;}
+.grey-bg{background-color: #c7c9ce;}
+
+.dark-border{border-color: rgba(66, 86, 122, 0.07);}
+.light-border{border-color: #ffffff4f;}

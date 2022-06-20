@@ -19,7 +19,7 @@
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
                     <li class="burger-menu-link"><a href="about-company.html">О компании</a></li>
-                    <li class="burger-menu-link"><a href="">Деятельность</a></li>
+                    <li class="burger-menu-link"><a href="index.html#1">Деятельность</a></li>
                     <li class="burger-menu-link"><a href="brands.html">Бренды</a></li>
                     <li class="burger-menu-link"><a href="partners.html">Партнерство</a></li>
                     <li class="burger-menu-link"><a href="contacts.html">Контакты</a></li>
@@ -69,10 +69,18 @@
                  <div class="logo"><a href="index.html"><img src="assets/img/logo.svg"></a></div>
                  <div class="menu left-menu">
                      <ul class="menu-links">
-                         <li class="menu-link active"><span class="menu-link-span"></span> Компания</li>
-                         <li class="menu-link activity-link" id="activityBlockLink"><span class="menu-link-span"></span> Деятельность</li>
-                         <li class="menu-link"><span class="menu-link-span"></span> Миссия</li>
-                         <li class="menu-link"><span class="menu-link-span"></span> Новости</li>
+                         <li class="menu-link active"><span class="menu-link-span"></span>
+                            <a href="#0"> Компания</a>
+                         </li>
+                         <li class="menu-link" id="activityBlockLink"><span class="menu-link-span"></span>
+                            <a href="#1"> Деятельность</a>
+                         </li>
+                         <li class="menu-link"><span class="menu-link-span"></span>
+                            <a href="#2"> Миссия</a>
+                         </li>
+                         <li class="menu-link"><span class="menu-link-span"></span>
+                            <a href="#3"> Новости</a>
+                         </li>
                      </ul>
                  </div>
                 <div class="sound-control">
@@ -102,7 +110,7 @@
         <div class="carousel">
             <div class="center-block-wrapper">
                  
-                <div class="center-block about-block">
+                <div class="center-block about-block active-window" id="0">
                     <div class="first-block-bg">   
                         <video autoplay muted loop id="myVideo">
                           <source src="assets/video/bg.mp4" type="video/mp4">
@@ -119,7 +127,7 @@
                      </div>
                 </div>
 
-                <div class="center-block activity-block">
+                <div class="center-block activity-block" id="1">
                     
                    <div class="plus-container">
                         <div class="plus plus-1">
@@ -189,7 +197,7 @@
                     </div>
 
                 </div>
-                <div class="center-block mission-block light-block">
+                <div class="center-block mission-block light-block" id="2">
                     <div class="mission-wrapper" style="z-index:2">
                         <div class="row row-1">
                             <h2> Миссия Компании</h2>
@@ -217,7 +225,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="center-block news-block">
+                <div class="center-block news-block" id="3">
                     <div class="news-wrapper">
                          <div class="row row-1">
                             <img class="news-img" src="assets/img/news/news1.jpg">
@@ -269,5 +277,40 @@
         </div>
     </div>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/js/index.js"></script>
+<script type="text/javascript">
+$(function () {
+            var body = $("body");
+            var abBorder = $(".absolute-border");
+            var burgerLine = $(".line");
+            var svgRect = $("rect");
+            var svgPath = $("path");
+            var navbarBg = $(".burger-navbar");
+            var menuLinkSpan = $(".menu-link-span");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 1000) {
+                   body.removeClass('light-font').addClass("dark-font");
+                   burgerLine.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   abBorder.removeClass('light-border').addClass("dark-border");
+                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
+                   svgRect.attr("stroke", "#42567a");
+                   svgPath.attr("stroke", "#42567a");
+                } else {
+                    body.removeClass('dark-font').addClass("light-font");
+                    burgerLine.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                    abBorder.removeClass('dark-border').addClass("light-border");
+                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
+                    svgRect.attr("stroke", "white");
+                    svgPath.attr("stroke", "white");
+
+                }
+            });
+        });
+</script>
+
 </html>
