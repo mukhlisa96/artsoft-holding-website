@@ -32,7 +32,7 @@ $(function() {
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               let ind=target.selector;
               ind = ind.replace('#', '');
-              console.log(ind);
+              // console.log(ind);
         if (ind ==2 || ind == 3) {
             nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
 
@@ -102,17 +102,17 @@ $(function() {
         });
 
         
-plusBtns.forEach((pBtn, index) => {
+// plusBtns.forEach((pBtn, index) => {
 
-    pBtn.addEventListener('click', () => {
-        plusContainer.classList.remove('show');
-        let campImg = document.querySelector(`.camp-img-${index+1}`);
-        let campModal = document.querySelector(`.camp-modal-${index+1}`);
+//     pBtn.addEventListener('click', () => {
+//         plusContainer.classList.remove('show');
+//         let campImg = document.querySelector(`.camp-img-${index+1}`);
+//         let campModal = document.querySelector(`.camp-modal-${index+1}`);
 
-        campImg.classList.add('show-camp-img');
-        campModal.classList.add('open');
-    });
-  });
+//         campImg.classList.add('show-camp-img');
+//         campModal.classList.add('open');
+//     });
+//   });
 
 
 
@@ -182,3 +182,42 @@ navSlide();
 
 
 
+// activity modal
+
+let modalOpenBtns = document.querySelectorAll(".plus");
+
+ modalOpenBtns.forEach((btn, index) => {
+          btn.addEventListener('click', () => {
+            document.querySelector("a").classList.add("disabled");
+
+            document.querySelectorAll('.menu-link').forEach((ml,index) => {ml.style.display="none";});
+            currentImg = document.querySelector(`#camp-img-${index}`);
+            currentImg.classList.add("show-img");
+            setTimeout(function(){ 
+                currentModal = document.querySelector(`#modal-${index}`);
+                currentModal.classList.add("show-modal");
+            }, 1000);
+
+
+          });
+        });
+
+
+ let modalCloseBtns = document.querySelectorAll(".close");
+
+ modalCloseBtns.forEach((btn, index) => {
+          btn.addEventListener('click', () => {
+                document.querySelectorAll('.menu-link').forEach((ml,index) => {ml.style.display="flex";});
+                currentModal = document.querySelector(`#modal-${index}`);
+                currentModal.classList.remove("show-modal");
+
+            setTimeout(function(){ 
+            currentImg = document.querySelector(`#camp-img-${index}`);
+            currentImg.classList.remove("show-img");
+            }, 1000);
+
+
+
+            
+          });
+        });
