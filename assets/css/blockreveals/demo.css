@@ -498,7 +498,7 @@ a:focus {
 	min-height: 400px;
 	top: 0;
 	left: 0;
-	padding: 5vw;
+	padding: 5vw 13vw;
 	background: #f4f6f9;
     color: #42567a;
 }
@@ -513,7 +513,7 @@ a:focus {
 }
 
 .form__section--title {
-	font-size: 2.35vw;
+	/*font-size: 2.35vw;*/
 	padding: 0 0 1em;
 	line-height: 1.1;
 	max-width: 380px;

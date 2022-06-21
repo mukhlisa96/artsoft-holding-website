@@ -233,7 +233,7 @@ div.fourth > .burger, .mobile-burger{
 
 .line{
     width: 40px;
-    height: 1px;
+    height: 2px;
     margin: 5px;
     background-color: #fff;
 }
@@ -403,17 +403,30 @@ li.menu-link.active ~ .center-block{
 }
 
 .main-heading-wrapper{
-   text-align: center;
-text-transform: uppercase;
-color: inherit;
-font-size: 40px;
-display: flex;
-justify-content: center;
-min-height: 90vh;
-align-items: center;
-z-index: 2;
-position: relative;
-font-family: 'Jost', sans-serif;
+     text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  font-family: 'Jost', sans-serif;
+  flex-direction: column;
+  padding-top: 12%;
+padding-bottom: 2%;
+
+}
+
+
+.main-1-bottom-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  text-transform: initial;
 }
 
 .about-left{
@@ -844,7 +857,15 @@ margin-left: 80px;
     z-index: 5;
 }
 .news-wrapper{
-    margin-top: 50px;
+    display: grid;
+grid-template-columns: 45% 450%;
+padding: 0;
+/*background: red;*/
+gap: 6%;
+margin-left: 8%;
+}
+.news-wrapper a{
+    /*background-color: pink;*/
 }
 
 .footer{
@@ -861,9 +882,11 @@ margin-left: 80px;
 }
 
 .news-img{
-    height: 100%;
-    width: 100%;
+    height: 250px;
+    width: 400px;
     object-fit: cover;
+    overflow: hidden;
+    margin-bottom: 20px;
 
 }
 .burger-menu-links > li > a{
@@ -954,7 +977,8 @@ button.circle-prev[disabled]{
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 0;
+    z-index: -1;
+
     
 /*transform: translate3d(-100px, -100px, 100px);*/
 opacity: 0;
@@ -1020,4 +1044,20 @@ margin: 0 40px;
 a.disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.main-1-bottom-text {
+  display: grid;
+  width: 100%;
+  text-transform: initial;
+  grid-template-columns: 50% 50%;
+  justify-content: left;
+text-align: left;
+text-align: center;
+}
+
+.main-1-bottom-p{
+    width:400px; 
+    text-align: left;
+    margin-left: 12%;
 }

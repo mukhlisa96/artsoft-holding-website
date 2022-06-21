@@ -328,7 +328,7 @@
             var menuLinkSpan = $(".menu-link-span");
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
-
+                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
                 if (scroll >= 500) {
                    body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");

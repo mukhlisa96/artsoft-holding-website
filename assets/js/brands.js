@@ -202,3 +202,8 @@ circles.forEach((c, index)=> {
     });
 });
 // indicators rotation slider
+
+ $(window).scroll(function () {
+         var scroll = $(window).scrollTop();
+         if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
+});

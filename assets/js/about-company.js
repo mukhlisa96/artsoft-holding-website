@@ -425,3 +425,44 @@ if(angle==90){
     // let doot = dot1.getBoundingClientRect();
     // console.log("x: "+ doot.x);
     // console.log("y: "+ doot.y);
+
+
+
+
+let playBtn = document.querySelector(".play-btn");
+let playLabel = document.querySelector(".play-label");
+let closeVideoCircle = document.querySelector("#closeVideoCircle");
+let playingCircleVideo = document.querySelector("#playingCircleVideo");
+
+playBtn.addEventListener('click', () => {
+    playingCircleVideo.style.display = "block";
+    document.querySelector(".video-blacklayer").style.display = "block";
+    closeVideoCircle.style.display = "block";
+});
+
+playLabel.addEventListener('click', () => {
+    playingCircleVideo.style.display = "block";
+    document.querySelector(".video-blacklayer").style.display = "block";
+    closeVideoCircle.style.display = "block";
+
+});
+
+closeVideoCircle.addEventListener('click', () => {
+    playingCircleVideo.style.display = "none";
+    document.querySelector(".video-blacklayer").style.display = "none";
+    closeVideoCircle.style.display = "none";
+});
+
+
+
+$(document).mouseup(function(e) 
+{
+    var playingCircleVideo = $("#playingCircleVideo");
+
+    // if the target of the click isn't the playingCircleVideo nor a descendant of the playingCircleVideo
+    if (!playingCircleVideo.is(e.target) && playingCircleVideo.has(e.target).length === 0) 
+    {
+        playingCircleVideo.hide();
+         document.querySelector(".video-blacklayer").style.display = "none";
+    }
+});

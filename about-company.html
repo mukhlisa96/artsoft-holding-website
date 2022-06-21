@@ -19,6 +19,13 @@
 </head>
 
 <body>
+
+     <div class="video-blacklayer"></div>
+                            <button id="closeVideoCircle">&times;</button>
+                            <video id="playingCircleVideo" autoplay muted loop width="1000" height="auto" controls>
+                              <source src="assets/video/bg.mp4" type="video/mp4">
+                            </video>
+
     <div class="burger-navbar">
         <div class="block-container">
             <div class="burger-navbar-block-2">
@@ -91,9 +98,25 @@
                           <source src="assets/video/bg.mp4" type="video/mp4">
                         </video>
                         <div class="blacklayer"></div>
-                        <div class="main-heading-wrapper">
+                      <!--   <div class="main-heading-wrapper">
                             <h1>Международный <br> агрохолдинг</h1>
+                        </div> -->
+
+                           <div class="main-heading-wrapper">
+                            <div class="h1-wrapper">
+                            <h1>Международный <br> агрохолдинг</h1>
+                            </div>
+
+                            <div class="main-1-bottom-text">
+                                <div>
+                                   <button class="btn-one" href="about-company.html">О компании</button>
+                                </div>
+                                <div class="main-1-bottom-p">
+                                    <p>Группа компаний «ART SOFT HOLDING» - признанный эксперт в области птицеводства и производства продуктов питания</p>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
 
                      <div class="about-left">
@@ -111,11 +134,13 @@
                                 <div class="play-btn">
                                     <i class="fa fa-play"></i>
                                 </div>
-                                <video autoplay muted loop id="circle-video-inner">
+                                <div class="play-label">Смотреть видео</div>
+                                <video id="circle-video-inner">
                                   <source src="assets/video/bg.mp4" type="video/mp4">
                                 </video>
                                 
                             </div>
+                            
                         </div>
                         
                         <div class="profile-row-2">
@@ -395,6 +420,7 @@
             var menuLinkSpan = $(".menu-link-span");
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
+                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
   
                 if (scroll <= 500) {
                     body.removeClass('dark-font').addClass("light-font");

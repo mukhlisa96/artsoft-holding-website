@@ -53,7 +53,7 @@
                 Звук
             </div>
             <div class="mf-btn-container">
-                <button class="btn-one">О компании</button>
+                <button class="btn-one" href="about-company.html">О компании</button>
             </div>
         </div>
         <div class="mf-second-row">
@@ -117,7 +117,18 @@
                         </video>
                         <div class="blacklayer"></div>
                         <div class="main-heading-wrapper">
+                            <div class="h1-wrapper">
                             <h1>Международный <br> агрохолдинг</h1>
+                            </div>
+
+                            <div class="main-1-bottom-text">
+                                <div>
+                                   <button class="btn-one">О компании</button>
+                                </div>
+                                <div class="main-1-bottom-p">
+                                    <p>Группа компаний «ART SOFT HOLDING» - признанный эксперт в области птицеводства и производства продуктов питания</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -445,6 +456,7 @@
                 </div>
                 <div class="center-block news-block" id="3">
                     <div class="news-wrapper">
+                    <a href="news/news1.html">
                          <div class="row row-1">
                             <img class="news-img" src="assets/img/news/news1.jpg">
                             <div class="date">15.01.2022</div>
@@ -453,6 +465,8 @@
                                 В рамках межправительственных соглашений Узбекистана и Латвии, а также по принятом мерам главы страны Ш.Мирзиёева по развитию бизнеса и созданию благоприятных условий для предпринимательства ...
                             </p> -->
                          </div>
+                     </a>
+                         <a href="news/news2.html">
                           <div class="row row-2">
                             <img class="news-img" src="assets/img/news/news2.jpg">
                             <div class="date">30.06.2022</div>
@@ -461,6 +475,7 @@
                                 В малой промышленной зоне "Юксалиш" города Наманган, на предприятии ""Art Soft Ceramics" намечается производство кафеля и керамической пликти. Производственная плоўадь занимает около 1 га. из всей территории в 7 гектаров ...
                             </p> -->
                          </div>
+                         </a>
                     </div>
                     <div class="footer">
                         Design by  &nbsp;
@@ -508,7 +523,7 @@ $(function () {
             var menuLinkSpan = $(".menu-link-span");
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
-
+                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
                 if (scroll >= 900) {
                    body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");
