@@ -1,5 +1,7 @@
 body = document.querySelector('body');
 
+
+
 const centerblockWrapper = document.querySelector('.center-block-wrapper');
 let plusContainer = document.querySelector('.plus-container');
 var slideIndex = 0;
@@ -24,95 +26,71 @@ let absoluteBorder = document.querySelectorAll('.absolute-border');
             let middleLine = document.querySelector('.middle-line');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
+document.querySelectorAll(".menu-link").forEach((mLink, ind)=>{
+mLink.addEventListener('click', ()=>{
+          if (ind ==2 || ind == 3) {
+                        nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
 
-$(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              let ind=target.selector;
-              ind = ind.replace('#', '');
-              // console.log(ind);
-        if (ind ==2 || ind == 3) {
-            nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
-
-            body.style.color = '#42567a';
-            document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= '#42567a';});
-            burgerLine1.style.backgroundColor = '#42567a';
-            burgerLine2.style.backgroundColor = '#42567a';
-            rect.setAttribute("stroke", "#42567a");
-            path.setAttribute("stroke", "#42567a");
-            middleLine.style.height = '65%';
+                        body.style.color = '#42567a';
+                        document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= '#42567a';});
+                        burgerLine1.style.backgroundColor = '#42567a';
+                        burgerLine2.style.backgroundColor = '#42567a';
+                        rect.setAttribute("stroke", "#42567a");
+                        path.setAttribute("stroke", "#42567a");
+                        middleLine.style.height = '65%';
 
 
-            for (let elem of hover) {
-              elem.addEventListener('mouseenter', () => {
-                elem.style.borderBottom = '1px solid #42567a'
-              })
-              elem.addEventListener('mouseleave', () => {
-                elem.style.borderBottom = ''            })
-            };
+                        for (let elem of hover) {
+                          elem.addEventListener('mouseenter', () => {
+                            elem.style.borderBottom = '1px solid #42567a'
+                          })
+                          elem.addEventListener('mouseleave', () => {
+                            elem.style.borderBottom = ''            })
+                        };
 
-            for (let elem of absoluteBorder) {
-             elem.style.borderColor = 'rgba(66, 86, 122, 0.07)';
-            };
-            for (let elem of menuLinkSpan) {
-             elem.style.backgroundColor = '#42567a';
-            };
-
-
-         }else if(ind != 2 || ind != 3 ){
-              nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
-
-              body.style.color = 'white';
-              document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= 'white';});
-              burgerLine1.style.backgroundColor = 'white';
-              burgerLine2.style.backgroundColor = 'white';
-              middleLine.style.height = '100%';
-
-            for (let elem of hover) {
-              elem.addEventListener('mouseenter', () => {
-                elem.style.borderBottom = '1px solid white'
-              })
-              elem.addEventListener('mouseleave', () => {
-                elem.style.borderBottom = ''            })
-            };
-
-            rect.setAttribute("stroke", "white");
-            path.setAttribute("stroke", "white");
-
-             for (let elem of absoluteBorder) {
-             elem.style.borderColor = '#ffffff4f';
-            };
-            for (let elem of menuLinkSpan) {
-             elem.style.backgroundColor = 'white';
-            };
-
-         }
+                        for (let elem of absoluteBorder) {
+                         elem.style.borderColor = 'rgba(66, 86, 122, 0.07)';
+                        };
+                        for (let elem of menuLinkSpan) {
+                         elem.style.backgroundColor = '#42567a';
+                        };
 
 
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
+                     }else if(ind != 2 || ind != 3 ){
+                          nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
+
+                          body.style.color = 'white';
+                          document.querySelectorAll('.menu-link').forEach(function(indicator, ind){indicator.style.color= 'white';});
+                          burgerLine1.style.backgroundColor = 'white';
+                          burgerLine2.style.backgroundColor = 'white';
+                          middleLine.style.height = '100%';
+
+                        for (let elem of hover) {
+                          elem.addEventListener('mouseenter', () => {
+                            elem.style.borderBottom = '1px solid white'
+                          })
+                          elem.addEventListener('mouseleave', () => {
+                            elem.style.borderBottom = ''            })
+                        };
+
+                        rect.setAttribute("stroke", "white");
+                        path.setAttribute("stroke", "white");
+
+                         for (let elem of absoluteBorder) {
+                         elem.style.borderColor = '#ffffff4f';
+                        };
+                        for (let elem of menuLinkSpan) {
+                         elem.style.backgroundColor = 'white';
+                        };
+
+                     }
+});
+});
+
+
 
         
-// plusBtns.forEach((pBtn, index) => {
 
-//     pBtn.addEventListener('click', () => {
-//         plusContainer.classList.remove('show');
-//         let campImg = document.querySelector(`.camp-img-${index+1}`);
-//         let campModal = document.querySelector(`.camp-modal-${index+1}`);
-
-//         campImg.classList.add('show-camp-img');
-//         campModal.classList.add('open');
-//     });
-//   });
 
 
 

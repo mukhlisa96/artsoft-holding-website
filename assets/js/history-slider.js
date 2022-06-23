@@ -1,25 +1,8 @@
-// indicators rotation slider
 
-// let circles = document.querySelectorAll('.history-r-circle');
 let rect2 = document.querySelector('.rect-history');
-// let pos = 1;
 
 
-// circles.forEach((c, index)=> {
-//     c.addEventListener('click', () => {
-//         if(rect2.style.transform){
-//             rect2.style.transform = '';
-//         }else{
-//             if(index == 0)rect2.style.transform = `rotate(${90*(index+1)}deg)`;
-//             else if(index == 1)rect2.style.transform = `rotate(${90*(index+1)}deg)`;
-//             else if(index == 2)rect2.style.transform = `rotate(${90*(index+1)}deg)`;
-//             else if(index == 3)rect2.style.transform = `rotate(${90*(index+1)}deg)`;
-//         }
-//     });
-// });
-// indicators rotation slider
-
-function countTo(fromInput, toInput){
+function countTo(fromInput, toInput, outputId){
     let from = fromInput;
     let to = toInput;
 
@@ -27,13 +10,13 @@ function countTo(fromInput, toInput){
     let interval = 10;
 
     if(from==to){
-        document.querySelector('#output').textContent = from;
+        document.querySelector(outputId).textContent = from;
         return;
     }
 
     let counter = setInterval(function(){
         from += step;
-        document.querySelector('#output').textContent = from;
+        document.querySelector(outputId).textContent = from;
 
         if(from == to){
             clearInterval(counter);
@@ -41,9 +24,16 @@ function countTo(fromInput, toInput){
     }, interval);
 }
 
+let year1 = document.querySelector(".year-1");
+let year2 = document.querySelector(".year-2");
 
-hCircleNext = document.querySelector('.h-next');
-hCirclePrev = document.querySelector('.h-prev');
+let owlCar1 = document.querySelector(".h-line-1");
+let owlCar2 = document.querySelector(".h-line-2");
+let owlCar3 = document.querySelector(".h-line-3");
+let owlCar4 = document.querySelector(".h-line-4");
+
+let hCircleNext = document.querySelector('.h-next');
+let hCirclePrev = document.querySelector('.h-prev');
 let hDot1 = document.querySelector(".h-1");
 let hDot2 = document.querySelector(".h-2");
 let hDot3 = document.querySelector(".h-3");
@@ -88,24 +78,38 @@ if(Math.round(hDoot1.x)==551 && Math.round(hDoot1.y)==185){
     hDot1.classList.add('active-dot');
     // dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
-    countTo(10, 23);
-}else{hDot1.classList.remove('active-dot');}
+   countTo(1899, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+
+    owlCar1.style.display="block";
+    
+}else{hDot1.classList.remove('active-dot');owlCar1.style.display="none";}
 
 
 if(Math.round(hDoot2.x)==566 && Math.round(hDoot2.y)==170){
     hDot2.classList.add('active-dot');
     // dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
-    countTo(5, 12);
-}else{hDot2.classList.remove('active-dot');}
+    countTo(1979, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar2.style.display="block";
+
+}else{hDot2.classList.remove('active-dot');
+    owlCar2.style.display="none";
+
+}
 
 
 if(Math.round(hDoot3.x)==551 && Math.round(hDoot3.y)==185){
     hDot3.classList.add('active-dot');
     // dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
-    countTo(10, 20);
-}else{hDot3.classList.remove('active-dot');}
+    countTo(1959, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar3.style.display="block";
+}else{hDot3.classList.remove('active-dot');
+owlCar3.style.display="none";
+}
 
 
 if(Math.round(hDoot4.x)==566 && Math.round(hDoot4.y)==170){
@@ -113,8 +117,12 @@ if(Math.round(hDoot4.x)==566 && Math.round(hDoot4.y)==170){
     // dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
     hCircleNext.setAttribute("disabled","disabled");
-    countTo(25,39);
-}else{hDot4.classList.remove('active-dot');}
+    countTo(1799, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar4.style.display="block";
+}else{hDot4.classList.remove('active-dot');
+owlCar4.style.display="none";
+}
 
 // if(Math.round(hDoot5.x)==559 && Math.round(hDoot5.y)==178){
 //     hDot4.classList.add('active-dot');
@@ -169,32 +177,48 @@ if(Math.round(hDoot1.x)==849 && Math.round(hDoot1.y)==453){
     // dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
     hCirclePrev.setAttribute("disabled","disabled");
-    countTo(10, 23);
-}else{hDot1.classList.remove('active-dot');}
+    countTo(1939, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar1.style.display="block";
+}else{hDot1.classList.remove('active-dot');
+owlCar1.style.display="none";
+}
 
 
 if(Math.round(hDoot2.x)==834 && Math.round(hDoot2.y)==468){
     hDot2.classList.add('active-dot');
     // dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
-    countTo(5, 12);
-}else{hDot2.classList.remove('active-dot');}
+    countTo(1899, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar2.style.display="block";
+}else{hDot2.classList.remove('active-dot');
+owlCar2.style.display="none";
+}
 
 
 if(Math.round(hDoot3.x)==849 && Math.round(hDoot3.y)==453){
     hDot3.classList.add('active-dot');
     // dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
-    countTo(10, 20);
-}else{hDot3.classList.remove('active-dot');}
+    countTo(1999, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar3.style.display="block";
+}else{hDot3.classList.remove('active-dot');
+owlCar3.style.display="none";
+}
 
 
 if(Math.round(hDoot4.x)==834 && Math.round(hDoot4.y)==468){
     hDot4.classList.add('active-dot');
     // dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
-    countTo(25, 39);
-}else{hDot4.classList.remove('active-dot');}
+    countTo(1999, 2005, ".year-1");
+    countTo(2005, 2022, ".year-2");
+    owlCar4.style.display="block";
+}else{hDot4.classList.remove('active-dot');
+owlCar4.style.display="none";
+}
 
 // if(Math.round(hDoot5.x)==912 && Math.round(hDoot5.y)==527){
 //     hDot4.classList.add('active-dot');
@@ -218,3 +242,21 @@ if(Math.round(hDoot4.x)==834 && Math.round(hDoot4.y)==468){
 });
 
 
+
+
+$(document).ready(function(){
+  $('.owl-carousel-1').owlCarousel();
+});
+
+
+$(document).ready(function(){
+  $('.owl-carousel-2').owlCarousel();
+});
+
+$(document).ready(function(){
+  $('.owl-carousel-3').owlCarousel();
+});
+
+$(document).ready(function(){
+  $('.owl-carousel-4').owlCarousel();
+});

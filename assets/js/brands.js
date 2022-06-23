@@ -25,33 +25,6 @@ let absoluteBorder = document.querySelectorAll('.absolute-border');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
 
-$(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                 if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-
-        
-plusBtns.forEach((pBtn, index) => {
-
-    pBtn.addEventListener('click', () => {
-        plusContainer.classList.remove('show');
-        let campImg = document.querySelector(`.camp-img-${index+1}`);
-        let campModal = document.querySelector(`.camp-modal-${index+1}`);
-
-        campImg.classList.add('show-camp-img');
-        campModal.classList.add('open');
-    });
-  });
 
 
 

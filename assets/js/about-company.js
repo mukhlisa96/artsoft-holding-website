@@ -23,17 +23,9 @@ let absoluteBorder = document.querySelectorAll('.absolute-border');
             let path = document.querySelector('path');
             let middleLine = document.querySelector('.middle-line');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
-
-
-$(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              let ind=target.selector;
-              ind = ind.replace('#', '');
-              // console.log(ind);
-        if (ind ==1 || ind == 3 || ind==5) {
+document.querySelectorAll(".menu-link").forEach((mLink, ind)=>{
+    mLink.addEventListener('click', ()=>{
+          if (ind ==1 || ind == 3 || ind==5 || ind==4) {
             nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
 
             body.style.color = '#42567a';
@@ -61,7 +53,7 @@ $(function() {
             };
 
 
-         }else if(ind != 1 || ind != 3 || ind!=5){
+         }else if(ind != 1 || ind != 3 || ind!=5 || ind!=4){
               nav.style.background = 'rgb(137, 167, 223) none repeat scroll 0% 0%';
 
               body.style.color = 'white';
@@ -89,30 +81,13 @@ $(function() {
             };
 
          }
+    });
+});
 
 
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
 
         
-plusBtns.forEach((pBtn, index) => {
 
-    pBtn.addEventListener('click', () => {
-        plusContainer.classList.remove('show');
-        let campImg = document.querySelector(`.camp-img-${index+1}`);
-        let campModal = document.querySelector(`.camp-modal-${index+1}`);
-
-        campImg.classList.add('show-camp-img');
-        campModal.classList.add('open');
-    });
-  });
 
 
 

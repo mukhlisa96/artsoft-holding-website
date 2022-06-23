@@ -263,6 +263,16 @@ div.fourth > .burger, .mobile-burger{
     /*height: 400%;*/
     transition: all 1.5s;
     z-index: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none
+}
+
+.center-block{
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .burger-navbar{
