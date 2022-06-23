@@ -285,7 +285,7 @@
 
             document.querySelector('.btn--form-open').addEventListener('click', function() {
                 revealer.reveal({
-                    bgcolor: '#8f40f1',
+                    bgcolor: '#42567a',
                     direction: 'bt',
                     duration: 600,
                     onCover: function(contentEl, revealerEl) {
@@ -302,7 +302,7 @@
                 closeCtrl.removeEventListener('click', closeForm);
                 formEl.classList.remove('form--open');
                 revealer.reveal({
-                    bgcolor: '#8f40f1',
+                    bgcolor: '#42567a',
                     direction: 'tb',
                     duration: 600, 
                     onCover: function(contentEl, revealerEl) {
@@ -317,22 +317,23 @@
         </script>
 
         <script type="text/javascript">
-    
-    $(function () {
-            var body = $("body");
+   var body = $("body");
             var abBorder = $(".absolute-border");
             var burgerLine = $(".line");
             var svgRect = $("rect");
             var svgPath = $("path");
             var navbarBg = $(".burger-navbar");
-            var menuLinkSpan = $(".menu-link-span");
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
+            var menuLinkSpan1 = $(".menu-link-span");
+            let scrolling = document.querySelector(".center-block-wrapper");
+
+scrolling.onscroll = function (e) {  
+            var scroll = scrolling.scrollTop;
+           
                 if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
                 if (scroll >= 500) {
                    body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");
-                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan1.removeClass('light-bg').addClass("dark-bg");
                    abBorder.removeClass('light-border').addClass("dark-border");
                    navbarBg.removeClass('blue-bg').addClass("grey-bg");
                    svgRect.attr("stroke", "#42567a");
@@ -340,15 +341,14 @@
                 } else {
                     body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");
-                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan1.removeClass('dark-bg').addClass("light-bg");
                     abBorder.removeClass('dark-border').addClass("light-border");
                     navbarBg.removeClass('grey-bg').addClass("blue-bg");
                     svgRect.attr("stroke", "white");
                     svgPath.attr("stroke", "white");
 
                 }
-            });
-        });
+            }
 
 
 </script>

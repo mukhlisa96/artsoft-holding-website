@@ -24,11 +24,11 @@
         <div class="block-container">
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
-                    <li class="burger-menu-link"><a href="about-company.html">О компании</a></li>
-                    <li class="burger-menu-link"><a href="index.html#1">Деятельность</a></li>
-                    <li class="burger-menu-link"><a href="brands.html">Бренды</a></li>
-                    <li class="burger-menu-link"><a href="partners.html">Партнерство</a></li>
-                    <li class="burger-menu-link"><a href="contacts.html">Контакты</a></li>
+                    <li class="burger-menu-link"><a href="../about-company.html">О компании</a></li>
+                    <li class="burger-menu-link"><a href="../index.html#1">Деятельность</a></li>
+                    <li class="burger-menu-link"><a href="../brands.html">Бренды</a></li>
+                    <li class="burger-menu-link"><a href="../partners.html">Партнерство</a></li>
+                    <li class="burger-menu-link"><a href="../contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div class="burger-navbar-block-3">
@@ -129,6 +129,7 @@ column-gap: 100px;
 <p>Стороны выражают благодарность за содействия правительству Узбекистана, Посольству Латвийской Республики в Узбекистане и Посольству Узбекистана в Латвии.
 
                     </p>
+                    <button class="btn-one">Назад</button>
                 </div>
                 </div>
                
@@ -164,7 +165,15 @@ column-gap: 100px;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
 <script src="../assets/js/brands.js"></script>
-
+<script src="../assets/js/brands.js"></script>
+<script type="text/javascript">
+    let scrolling = document.querySelector(".center-block-wrapper");
+    scrolling.onscroll = function (e) {  
+            var scroll = scrolling.scrollTop;
+           
+                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
+             }   
+</script>
 
 </html>
 

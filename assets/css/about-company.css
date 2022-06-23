@@ -792,9 +792,21 @@ position: absolute;
     display: flex;
 }
 
-.owl-prev .owl-next {
+.owl-prev, .owl-next {
   font-size: 25px;
   border: none;
   background: no-repeat;
   margin: 10px;
+  /*position: absolute;*/
+}
+
+.owl-prev{
+    left: 50px;
+}
+
+.owl-next{
+    right: 50px;
+}
+.owl-dots{
+    display: none;
 }

@@ -513,67 +513,39 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/js/index.js"></script>
 <script type="text/javascript">
-     $(function () {
+
             var body = $("body");
             var abBorder = $(".absolute-border");
             var burgerLine = $(".line");
             var svgRect = $("rect");
             var svgPath = $("path");
             var navbarBg = $(".burger-navbar");
-            var menuLinkSpan = $(".menu-link-span");
-            $('.center-block').scroll(function () {
-                var scroll = $('.center-block').scrollTop();
-                console.log(scroll);
-                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
+            var menuLinkSpan1 = $(".menu-link-span");
+            let scrolling = document.querySelector(".center-block-wrapper");
+
+scrolling.onscroll = function (e) {  
+            var scroll = scrolling.scrollTop;
+            if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
   
-                if (scroll <= 500) {
-                    body.removeClass('dark-font').addClass("light-font");
-                    burgerLine.removeClass('dark-bg').addClass("light-bg");
-                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
-                     abBorder.removeClass('dark-border').addClass("light-border");
-                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
-                    svgRect.attr("stroke", "white");
-                    svgPath.attr("stroke", "white");
-                 
-                 }else if(scroll>=500 && scroll<=1100) {
-                   
-                   body.removeClass('light-font').addClass("dark-font");
-                   burgerLine.removeClass('light-bg').addClass("dark-bg");
-                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
-                   abBorder.removeClass('light-border').addClass("dark-border");
-                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
-                   svgRect.attr("stroke", "#42567a");
-                   svgPath.attr("stroke", "#42567a");
- 
-                }else if(scroll>=1100 && scroll<=1800){
+              if(scroll<=1100){
                      body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");
-                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
+                    menuLinkSpan1.removeClass('dark-bg').addClass("light-bg");
                      abBorder.removeClass('dark-border').addClass("light-border");
                     navbarBg.removeClass('grey-bg').addClass("blue-bg");
                     svgRect.attr("stroke", "white");
                     svgPath.attr("stroke", "white");
-                }else if(scroll>=1800 && scroll<=2500){
+                }else {
                     body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");
-                   menuLinkSpan.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan1.removeClass('light-bg').addClass("dark-bg");
                    abBorder.removeClass('light-border').addClass("dark-border");
                    navbarBg.removeClass('blue-bg').addClass("grey-bg");
                    svgRect.attr("stroke", "#42567a");
                    svgPath.attr("stroke", "#42567a");
-                }else if(scroll>=3600){
-                     body.removeClass('dark-font').addClass("light-font");
-                    burgerLine.removeClass('dark-bg').addClass("light-bg");
-                    menuLinkSpan.removeClass('dark-bg').addClass("light-bg");
-                     abBorder.removeClass('dark-border').addClass("light-border");
-                    navbarBg.removeClass('grey-bg').addClass("blue-bg");
-                    svgRect.attr("stroke", "white");
-                    svgPath.attr("stroke", "white");
-                }
-
-               
-            });
-        });
+               }
+            }
+      
 </script>
 
 </html>
