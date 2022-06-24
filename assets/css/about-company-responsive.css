@@ -1,6 +1,75 @@
 @media only screen and (max-width: 768px) {
 
-.statistics-block, .history-block{display: none;}
+ .history-block{}
+
+ .h-circle{
+    /*border: 1px solid lightgrey;*/
+ }
+
+ .x-line{
+    display: none;
+ }
+
+ .year-1, .year-2{
+    font-size: 50px;
+ }
+.h-title{
+    left: 20px;
+}
+.h-circle{
+    left: 0;
+}
+ .h-years-container{
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+ .h-slider-wrapper{
+    left: 20px;
+ }
+.statistics-block{
+align-items: start;
+justify-content: center;
+padding-top: 90px;
+}
+.statistics-wrapper{
+    width: 100%;
+    margin-left: 0;
+}
+.rect{
+    display: none;
+}
+
+.central-circle{
+    left: 0;
+}
+
+.control-wrapper{
+    display: none;
+}
+
+.central-circle{
+    width: 300px;
+    height: 300px;
+}
+.r-circle-label{
+    display: none;
+}
+
+.central-circle-check{
+    font-size: 200px;
+    padding: 20px 37px;
+margin-top: 40px;
+}
+
+.st-heading {
+  position: absolute;
+  left: 31%;
+  margin-top: 430px;
+  }
+
 .main-1-bottom-p{
     opacity: 1;
     margin-left: 0;
