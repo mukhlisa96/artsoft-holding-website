@@ -262,8 +262,30 @@ padding-top: 50px;
 .feedback-footer{
     display: none;
 }
+
+.news-body{
+    width: 100%;
+margin-left: 0;
+padding: 20px;
+display: grid;
+grid-template-columns: 100%;
+column-gap: 100px;
+}
+
+.news-desc-img{
+    height: auto;
+}
+
+.news-main-wrapper{
+    /*background-color: red;*/
+}
+
+
+.brands-label.news-label {
+  left: 20px;
+  top: 12%;
+  font-size: 25px;
+  color: #44577b;
+}
 /*max-width: 768px*/}
 
-.align-center{
-
-}
