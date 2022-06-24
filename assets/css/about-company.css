@@ -689,6 +689,8 @@ top: 6%;
 display: none;
 z-index: 40;
 cursor: pointer;
+width: 1000px;
+height: auto;
 
 }
 
@@ -812,5 +814,9 @@ position: absolute;
 }
 
 .all-brands-wrapper{
+    display: none;
+}
+
+.mobile-year-controller{
     display: none;
 }

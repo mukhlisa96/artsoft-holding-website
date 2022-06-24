@@ -32,7 +32,7 @@
 .statistics-block{
 align-items: start;
 justify-content: center;
-padding-top: 90px;
+padding-top: 150px;
 }
 .statistics-wrapper{
     width: 100%;
@@ -61,13 +61,54 @@ padding-top: 90px;
 .central-circle-check{
     font-size: 200px;
     padding: 20px 37px;
-margin-top: 40px;
+margin-top: 62px;
+margin-top: -111px;
 }
 
+.owl-carousel-stat{
+    width: 500px;
+    position: absolute;
+    top: 48%;
+}
+
+.owl-carousel-stat > .owl-nav{
+    text-align: center;
+}
+
+.owl-carousel-stat > .owl-nav > .owl-next, .owl-carousel-stat > .owl-nav > .owl-prev{
+    color: white;
+background: #9cb7e9;
+border: none;
+border-radius: 50%;
+height: 35px;
+width: 35px;
+margin-top: 80px;
+}
+
+.owl-carousel-stat > .owl-dots{
+    display: block;
+    width: 100%;
+text-align: center;
+}
+
+.owl-carousel-stat > .owl-dots > .owl-dot{
+    margin: 10px;
+    /*padding: 1px;*/
+    border: none;
+    background-color: lightblue;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+.owl-carousel-stat > .owl-dots > .owl-dot.active{
+    background-color: white;
+}
 .st-heading {
   position: absolute;
   left: 31%;
-  margin-top: 430px;
+  margin-top: 530px;
+  text-align: center;
   }
 
 .main-1-bottom-p{
@@ -204,5 +245,83 @@ margin: 0;
 .all-brands-wrapper-item img{
     width: 150px;
 }
+
+.activity-block{
+     scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: 10px;
+}
+
+#playingCircleVideo{
+    width: 400px;
+    height: auto;
+    top: 30%;
+    left: 1.5%;
+}
+
+#closeVideoCircle{
+    top: 18%;
+    left: 83%;
+}
+
+.desctop-stat{
+    display: none;
+}
+
+.mobile-circle-prev, .mobile-circle-next{
+color: white;
+background: blue;
+border: none;
+border-radius: 50%;
+height: 30px;
+width: 30px;
+display: none;
+}
+
+.mobile-circle-next{
+
+}
+.mobile-circle-control{
+    position: absolute;
+}
+
+.central-circle{
+    /*overflow: hidden;*/
+}
+
+
+.mobile-year-controller{
+    display: block;
+    text-align: center;
+    margin-top: 150%;
+    padding-top: 20px;
+}
+
+.m-h-next, .m-h-prev{
+    background-color: white;
+    border: 1px solid #9ba5b9;
+    color: #475a7e;
+    width: 35px;
+    height: 35px;
+    line-height: 1;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+.h-index-span{
+    position: absolute;
+text-align: center;
+display: flex;
+width: 100%;
+justify-content: center;
+font-weight: lighter;
+}
+
+.owl-nav.disabled{
+    display: none;
+}
+
 
 }/*media query end*/

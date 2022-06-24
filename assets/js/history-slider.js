@@ -78,7 +78,7 @@ if(Math.round(hDoot1.x)==551 && Math.round(hDoot1.y)==185){
     hDot1.classList.add('active-dot');
     // dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
-   countTo(1899, 2005, ".year-1");
+   countTo(1992, 2005, ".year-1");
     countTo(2005, 2022, ".year-2");
 
     owlCar1.style.display="block";
@@ -90,7 +90,7 @@ if(Math.round(hDoot2.x)==566 && Math.round(hDoot2.y)==170){
     hDot2.classList.add('active-dot');
     // dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
-    countTo(1979, 2005, ".year-1");
+    countTo(1993, 2005, ".year-1");
     countTo(2005, 2022, ".year-2");
     owlCar2.style.display="block";
 
@@ -104,7 +104,7 @@ if(Math.round(hDoot3.x)==551 && Math.round(hDoot3.y)==185){
     hDot3.classList.add('active-dot');
     // dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
-    countTo(1959, 2005, ".year-1");
+    countTo(1989, 2005, ".year-1");
     countTo(2005, 2022, ".year-2");
     owlCar3.style.display="block";
 }else{hDot3.classList.remove('active-dot');
@@ -117,7 +117,7 @@ if(Math.round(hDoot4.x)==566 && Math.round(hDoot4.y)==170){
     // dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
     hCircleNext.setAttribute("disabled","disabled");
-    countTo(1799, 2005, ".year-1");
+    countTo(1999, 2005, ".year-1");
     countTo(2005, 2022, ".year-2");
     owlCar4.style.display="block";
 }else{hDot4.classList.remove('active-dot');
@@ -259,4 +259,101 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.owl-carousel-4').owlCarousel();
+});
+
+
+
+let mC = 1;
+
+let mHPrev = document.querySelector('.m-h-prev');
+let mHNext = document.querySelector('.m-h-next');
+hSIndex = document.querySelector(".h-s-index");
+
+mHNext.addEventListener('click', () => {
+    mC++;
+    if(mC==1){
+        mHPrev.removeAttribute("disabled");
+        hSIndex.innerHTML = "01";
+        countTo(1989, 1999, ".year-1");
+        countTo(1993, 2003, ".year-2");
+        owlCar1.style.display = "block";
+    }else{owlCar1.style.display="none";}
+
+    if(mC==2){
+        mHPrev.removeAttribute("disabled");
+        hSIndex.innerHTML = "02";
+        countTo(1999, 2004, ".year-1");
+        countTo(2004, 2008, ".year-2");
+        owlCar2.style.display = "block";
+    }else{owlCar2.style.display="none";}
+
+    if(mC==3){
+        mHPrev.removeAttribute("disabled");
+        hSIndex.innerHTML = "03";
+        countTo(2004, 2009, ".year-1");
+        countTo(2009, 2013, ".year-2");
+        owlCar3.style.display = "block";
+    }else{owlCar3.style.display="none";}
+
+    if(mC==4){
+        mHNext.setAttribute("disabled","disabled");
+        mHPrev.removeAttribute("disabled");
+
+        hSIndex.innerHTML = "04";
+        countTo(2013, 2018, ".year-1");
+        countTo(2018, 2022, ".year-2");
+        owlCar4.style.display = "block";
+    }else{owlCar4.style.display="none";}
+
+    if(mC>4){
+        mHNext.setAttribute("disabled","disabled");
+        mHPrev.removeAttribute("disabled");
+
+    mC=4;
+}
+});
+
+
+
+mHPrev.addEventListener('click', () => {
+    mC--;
+    if(mC==1){
+        mHPrev.setAttribute("disabled","disabled");
+        mHNext.removeAttribute("disabled");
+
+        hSIndex.innerHTML = "01";
+        countTo(1989, 1999, ".year-1");
+        countTo(1993, 2003, ".year-2");
+        owlCar1.style.display = "block";
+    }else{owlCar1.style.display="none";}
+
+    if(mC==2){
+        mHNext.removeAttribute("disabled");
+        hSIndex.innerHTML = "02";
+        countTo(1999, 2004, ".year-1");
+        countTo(2004, 2008, ".year-2");
+        owlCar2.style.display = "block";
+    }else{owlCar2.style.display="none";}
+
+    if(mC==3){
+        mHNext.removeAttribute("disabled");
+        hSIndex.innerHTML = "03";
+        countTo(2004, 2009, ".year-1");
+        countTo(2009, 2013, ".year-2");
+        owlCar3.style.display = "block";
+    }else{owlCar3.style.display="none";}
+
+    if(mC==4){
+        mHPrev.removeAttribute("disabled");
+        hSIndex.innerHTML = "04";
+        countTo(2013, 2018, ".year-1");
+        countTo(2018, 2022, ".year-2");
+        owlCar4.style.display = "block";
+    }else{owlCar4.style.display="none";}
+
+    if(mC<1){
+        mHPrev.setAttribute("disabled","disabled");
+        mHNext.removeAttribute("disabled");
+    mC=1;
+}
 });

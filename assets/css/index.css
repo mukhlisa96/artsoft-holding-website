@@ -355,6 +355,11 @@ div.fourth > .burger, .mobile-burger{
     background-size: cover;
     background-position: center center; 
     background-image: url(../img/map.jpg);
+
+     scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: 10px;
 }
 
 .mission-block{
@@ -952,6 +957,14 @@ margin-left: 8%;
 
 .dark-border{border-color: rgba(66, 86, 122, 0.07);}
 .light-border{border-color: #ffffff4f;}
+
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
 
 button.circle-prev:disabled,
 button.circle-prev[disabled]{

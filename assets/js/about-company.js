@@ -436,5 +436,15 @@ $(document).mouseup(function(e)
     {
         playingCircleVideo.hide();
          document.querySelector(".video-blacklayer").style.display = "none";
+         document.querySelector("#closeVideoCircle").style.display = "none";
     }
+});
+
+$(document).ready(function(){
+  $('.owl-carousel-stat').owlCarousel({
+
+    loop:true,
+    items:1,
+    nav:true
+  });
 });
