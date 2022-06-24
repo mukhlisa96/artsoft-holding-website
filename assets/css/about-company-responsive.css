@@ -1,0 +1,139 @@
+@media only screen and (max-width: 768px) {
+
+.statistics-block, .history-block{display: none;}
+.main-1-bottom-p{
+    opacity: 1;
+    margin-left: 0;
+    padding: 20px;
+    padding-bottom: 55px;
+}
+
+.about-comp-btn{
+    display: none;
+}
+
+.profile-row-1{
+    flex-direction: row;
+    height: auto;
+}
+
+
+.profile-row-1 > h2{
+    font-size: 20px;
+font-weight: lighter;
+padding-top: 50px;
+}
+
+#circle-video-inner{
+    width: 150px;
+height: 150px;
+}
+.play-btn{
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+}
+
+.play-label{
+    top: 44%;
+}
+
+
+.profile-row-2-number{
+    font-size: 35px;
+}
+
+.profile-row-2-ulli{
+    height: 30%;
+}
+
+.profile-row-2{
+    height: 400px;
+    height: 400px;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+.geography-row-1{
+    flex-direction: column;
+}
+
+.eksport-stat{
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.geography-wrapper{
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-top: 110px;
+}
+
+.geography-row-1 > div{
+    margin: 0;
+}
+
+.geography-row-2 > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.brands-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.brands-wrapper > .heading-wrapper{
+    width: 100%;
+    margin-left: 0;
+}
+.brands-wrapper > .brands-desc{
+    width: 100%;
+}
+
+.brands-block-container{
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+}
+
+.brands-slider-container{display: none;}
+.products-wrapper{
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: 50% 50%;
+}
+
+.all-brands-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 80px;
+}
+
+
+.all-brands-wrapper-item{
+     height: 90px;
+  cursor: pointer;
+  transition: linear 0.5s;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.all-brands-wrapper-item:hover{
+    transition: linear 0.5s;
+
+     border: 5px solid white;
+     background-color: white;
+     color: lightblue;
+}
+.all-brands-wrapper-item img{
+    width: 150px;
+}
+
+}/*media query end*/

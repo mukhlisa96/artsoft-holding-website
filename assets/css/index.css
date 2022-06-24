@@ -71,7 +71,7 @@ body::-webkit-scrollbar {
 
 h2, h3, h4, h5, h6{
     font-family: "Jost", sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 *{
     box-sizing: border-box;
@@ -868,7 +868,7 @@ margin-left: 80px;
 }
 .news-wrapper{
     display: grid;
-grid-template-columns: 45% 450%;
+grid-template-columns: 45% 45%;
 padding: 0;
 /*background: red;*/
 gap: 6%;
@@ -1070,4 +1070,11 @@ text-align: center;
     width:400px; 
     text-align: left;
     margin-left: 12%;
+}
+
+.mobile-link{
+    display: none;
+}
+.lang.lang-mobile{
+    display: none;
 }

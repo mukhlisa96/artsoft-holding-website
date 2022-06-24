@@ -810,3 +810,7 @@ position: absolute;
 .owl-dots{
     display: none;
 }
+
+.all-brands-wrapper{
+    display: none;
+}
