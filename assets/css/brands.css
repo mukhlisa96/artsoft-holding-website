@@ -39,7 +39,7 @@ ul.lang > li:hover {
 }
 .brands-label{
     position: absolute;
-    top: 40vh;
+    /*top: 40vh;*/
     left: 39vw;
     z-index: 2;
     color: white;

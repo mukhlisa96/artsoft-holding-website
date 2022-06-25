@@ -41,20 +41,20 @@ let hDot4 = document.querySelector(".h-4");
 let hDot5 = document.querySelector(".h-5");
 let hDot6 = document.querySelector(".h-6");
 
-currentCircleSlideIndex = 1;
-reverseRotate = 1;
+hCurrentCircleSlideIndex = 1;
+hReverseRotate = 1;
 
 
 var activeDotIndex = document.querySelector(".history-index");
 
 hCircleNext.addEventListener('click', () => {
 hCirclePrev.removeAttribute("disabled");
-    // if(currentCircleSlideIndex<=4){ 
-        // console.log("NEXTreverseR"+reverseRotate);
-        // console.log("NEXTRot"+currentCircleSlideIndex);
-        rect2.style.transform = `rotate(${currentCircleSlideIndex*90}deg)`;
-        currentCircleSlideIndex++;
-        reverseRotate--;
+    // if(hCurrentCircleSlideIndex<=4){ 
+        // console.log("NEXTreverseR"+hReverseRotate);
+        // console.log("NEXTRot"+hCurrentCircleSlideIndex);
+        rect2.style.transform = `rotate(${hCurrentCircleSlideIndex*90}deg)`;
+        hCurrentCircleSlideIndex++;
+        hReverseRotate--;
 
 
           let hDoot1 = hDot1.getBoundingClientRect();
@@ -74,7 +74,7 @@ hCirclePrev.removeAttribute("disabled");
           // console.log("6--"+Math.round(hDoot5.x) +" "+Math.round(hDoot6.y));
 
 
-if(Math.round(hDoot1.x)==551 && Math.round(hDoot1.y)==185){
+if(Math.round(hDoot1.x)==556 && Math.round(hDoot1.y)==176){
     hDot1.classList.add('active-dot');
     // dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
@@ -86,7 +86,7 @@ if(Math.round(hDoot1.x)==551 && Math.round(hDoot1.y)==185){
 }else{hDot1.classList.remove('active-dot');owlCar1.style.display="none";}
 
 
-if(Math.round(hDoot2.x)==566 && Math.round(hDoot2.y)==170){
+if(Math.round(hDoot2.x)==556 && Math.round(hDoot2.y)==176){
     hDot2.classList.add('active-dot');
     // dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
@@ -100,7 +100,7 @@ if(Math.round(hDoot2.x)==566 && Math.round(hDoot2.y)==170){
 }
 
 
-if(Math.round(hDoot3.x)==551 && Math.round(hDoot3.y)==185){
+if(Math.round(hDoot3.x)==556 && Math.round(hDoot3.y)==176){
     hDot3.classList.add('active-dot');
     // dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
@@ -112,7 +112,7 @@ owlCar3.style.display="none";
 }
 
 
-if(Math.round(hDoot4.x)==566 && Math.round(hDoot4.y)==170){
+if(Math.round(hDoot4.x)==556 && Math.round(hDoot4.y)==176){
     hDot4.classList.add('active-dot');
     // dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
@@ -144,21 +144,21 @@ owlCar4.style.display="none";
     // }else{ 
         
         // hCircleNext.disable = true;
-        // currentCircleSlideIndex=1;
+        // hCurrentCircleSlideIndex=1;
     // }
     
 });
 
 hCirclePrev.addEventListener('click', () => {
     hCircleNext.removeAttribute("disabled");
-     // if(reverseRotate<=4 && reverseRotate >=1){ 
-        // console.log("PrevreverseR"+reverseRotate);
-        // console.log("PrevRot"+currentCircleSlideIndex);
+     // if(hReverseRotate<=4 && hReverseRotate >=1){ 
+        // console.log("PrevreverseR"+hReverseRotate);
+        // console.log("PrevRot"+hCurrentCircleSlideIndex);
 
-        rect2.style.transform = `rotate(${reverseRotate* -90}deg)`;
+        rect2.style.transform = `rotate(${hReverseRotate* -90}deg)`;
         rRow.style.transform = `rotate(90deg);`
-        currentCircleSlideIndex--;
-        reverseRotate++;
+        hCurrentCircleSlideIndex--;
+        hReverseRotate++;
 
 
          let hDoot1 = hDot1.getBoundingClientRect();
@@ -172,7 +172,7 @@ hCirclePrev.addEventListener('click', () => {
           // console.log("3--"+Math.round(hDoot3.x) +" "+Math.round(hDoot3.y));
           // console.log("4--"+Math.round(hDoot4.x) +" "+Math.round(hDoot4.y));
 
-if(Math.round(hDoot1.x)==849 && Math.round(hDoot1.y)==453){
+if(Math.round(hDoot1.x)==844 && Math.round(hDoot1.y)==464){
     hDot1.classList.add('active-dot');
     // dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
@@ -185,7 +185,7 @@ owlCar1.style.display="none";
 }
 
 
-if(Math.round(hDoot2.x)==834 && Math.round(hDoot2.y)==468){
+if(Math.round(hDoot2.x)==844 && Math.round(hDoot2.y)==464){
     hDot2.classList.add('active-dot');
     // dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
@@ -197,7 +197,7 @@ owlCar2.style.display="none";
 }
 
 
-if(Math.round(hDoot3.x)==849 && Math.round(hDoot3.y)==453){
+if(Math.round(hDoot3.x)==844 && Math.round(hDoot3.y)==464){
     hDot3.classList.add('active-dot');
     // dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
@@ -209,7 +209,7 @@ owlCar3.style.display="none";
 }
 
 
-if(Math.round(hDoot4.x)==834 && Math.round(hDoot4.y)==468){
+if(Math.round(hDoot4.x)==844 && Math.round(hDoot4.y)==464){
     hDot4.classList.add('active-dot');
     // dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
@@ -237,7 +237,7 @@ owlCar4.style.display="none";
 
     // }else{ 
         //  hCirclePrev.disable = true;
-        // currentCircleSlideIndex=1;
+        // hCurrentCircleSlideIndex=1;
     // }
 });
 

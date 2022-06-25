@@ -188,6 +188,7 @@ let modalOpenBtns = document.querySelectorAll(".plus");
                 document.querySelectorAll('.menu-link').forEach((ml,index) => {ml.style.display="flex";});
                 currentModal = document.querySelector(`#modal-${index}`);
                 currentModal.classList.remove("show-modal");
+                 document.querySelector("a").classList.remove("disabled");
 
             setTimeout(function(){ 
             currentImg = document.querySelector(`#camp-img-${index}`);

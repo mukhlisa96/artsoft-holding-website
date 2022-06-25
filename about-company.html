@@ -32,7 +32,7 @@
         <div class="block-container">
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
-                     <ul class="lang lang-mobile">
+                     <ul class="lang-mobile">
                      <li class="lang-item">уз</li>
                      <li class="lang-item">ру</li>
                      <li class="lang-item">ен</li>
@@ -119,7 +119,7 @@
 
                             <div class="main-1-bottom-text">
                                 <div class="about-comp-btn">
-                                   <button class="btn-one" href="about-company.html">О компании</button>
+                                   <!-- <button class="btn-one" href="about-company.html">О компании</button> -->
                                 </div>
                                 <div class="main-1-bottom-p">
                                     <p>Группа компаний «ART SOFT HOLDING» - признанный эксперт в области птицеводства и производства продуктов питания</p>
@@ -190,28 +190,28 @@
                            <button class="circle-next"><i class="fa fa-angle-right"></i></button>
                        </div>
                         </div>    
-
+                        <div class="rect-container">
                         <div class="rect">
                             <div class="r-row r-row-1">
                                 <div class="r-circle c-1 active-dot">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">1</i></div>
                                 </div>
 
                                 <div class="r-circle c-2">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">2</i></div>
                                 </div>
                             </div>
 
                             <div class="r-row r-row-2">
                                 <div class="r-circle c-3">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">3</i></div>
                                 </div>
                                 <div class="r-circle c-4">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">4</i></div>
                                 </div>
                             </div>
                         </div>
-
+                        </div>
                         <!-- <div class="active-dot-view"></div> -->
                             <div class="r-circle-label">
                                 Молочные продукты
@@ -299,20 +299,20 @@
                         <div class="rect rect-history">
                             <div class="r-row r-row-1">
                                 <div class="r-circle h-1 active-dot">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">1</i></div>
                                 </div>
 
                                 <div class="r-circle h-2">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">2</i></div>
                                 </div>
                             </div>
 
                             <div class="r-row r-row-2">
                                 <div class="r-circle h-3">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">3</i></div>
                                 </div>
                                 <div class="r-circle h-4">
-                                    <div class="r-circle-number"><i class="fa fa-star"></i></div>
+                                    <div class="r-circle-number"><i class="fa fa-star">4</i></div>
                                 </div>
                             </div>
 
@@ -618,6 +618,7 @@
 
 scrolling.onscroll = function (e) {  
             var scroll = scrolling.scrollTop;
+            console.log(scroll);
                 if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
   
                 if (scroll <= 500) {
@@ -657,8 +658,16 @@ scrolling.onscroll = function (e) {
                    svgPath.attr("stroke", "#42567a");
                 }
 
-                else if(scroll>=3600){
-                     body.removeClass('dark-font').addClass("light-font");
+                else if(scroll>=4300 && scroll<=5100){
+                     body.removeClass('light-font').addClass("dark-font");
+                   burgerLine.removeClass('light-bg').addClass("dark-bg");
+                   menuLinkSpan1.removeClass('light-bg').addClass("dark-bg");
+                   abBorder.removeClass('light-border').addClass("dark-border");
+                   navbarBg.removeClass('blue-bg').addClass("grey-bg");
+                   svgRect.attr("stroke", "#42567a");
+                   svgPath.attr("stroke", "#42567a");
+                }else{
+                    body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");
                     menuLinkSpan1.removeClass('dark-bg').addClass("light-bg");
                      abBorder.removeClass('dark-border').addClass("light-border");

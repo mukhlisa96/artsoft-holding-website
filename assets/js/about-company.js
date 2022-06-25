@@ -232,27 +232,27 @@ let pos = 1;
 // });
 // indicators rotation slider
 
-function countTo(fromInput, toInput){
-    let from = fromInput;
-    let to = toInput;
+// function countTo(fromInput, toInput){
+//     let from = fromInput;
+//     let to = toInput;
 
-    let step = to > from ? 1 : -1;
-    let interval = 10;
+//     let step = to > from ? 1 : -1;
+//     let interval = 10;
 
-    if(from==to){
-        document.querySelector('#output').textContent = from;
-        return;
-    }
+//     if(from==to){
+//         document.querySelector('#output').textContent = from;
+//         return;
+//     }
 
-    let counter = setInterval(function(){
-        from += step;
-        document.querySelector('#output').textContent = from;
+//     let counter = setInterval(function(){
+//         from += step;
+//         document.querySelector('#output').textContent = from;
 
-        if(from == to){
-            clearInterval(counter);
-        }
-    }, interval);
-}
+//         if(from == to){
+//             clearInterval(counter);
+//         }
+//     }, interval);
+// }
 
 
 circleNext = document.querySelector('.circle-next');
@@ -274,8 +274,8 @@ var activeDotIndex = document.querySelector(".active-dot-index");
 circleNext.addEventListener('click', () => {
 circlePrev.removeAttribute("disabled");
     // if(currentCircleSlideIndex<=4){ 
-        console.log("NEXTreverseR"+reverseRotate);
-        console.log("NEXTRot"+currentCircleSlideIndex);
+        // console.log("NEXTreverseR"+reverseRotate);
+        // console.log("NEXTRot"+currentCircleSlideIndex);
         rect1.style.transform = `rotate(${currentCircleSlideIndex*90}deg)`;
         currentCircleSlideIndex++;
         reverseRotate--;
@@ -288,42 +288,42 @@ circlePrev.removeAttribute("disabled");
           let dotLabel = document.querySelector(".r-circle-label");
 
           // let document.querySelector(".active-dot-view") = document.querySelector(".active-dot-view");
-          // console.log("1--"+Math.round(doot1.x) +" "+Math.round(doot1.y));
-          // console.log("2--"+Math.round(doot2.x) +" "+Math.round(doot2.y));
-          // console.log("3--"+Math.round(doot3.x) +" "+Math.round(doot3.y));
-          // console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
+          console.log("1--"+Math.round(doot1.x) +" "+Math.round(doot1.y));
+          console.log("2--"+Math.round(doot2.x) +" "+Math.round(doot2.y));
+          console.log("3--"+Math.round(doot3.x) +" "+Math.round(doot3.y));
+          console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
 
 
-if(Math.round(doot1.x)==504 && Math.round(doot1.y)==119){
+if(Math.round(doot1.x)==501 && Math.round(doot1.y)==122 || Math.round(doot1.y)==144){
     dot1.classList.add('active-dot');
     dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
-    countTo(10, 23);
+    countTo(10, 23, '#output');
 }else{dot1.classList.remove('active-dot');}
 
 
-if(Math.round(doot2.x)==504 && Math.round(doot2.y)==119){
+if(Math.round(doot2.x)==501 && Math.round(doot2.y)==122 || Math.round(doot2.y)==144){
     dot2.classList.add('active-dot');
     dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
-    countTo(5, 12);
+    countTo(5, 12, '#output');
 }else{dot2.classList.remove('active-dot');}
 
 
-if(Math.round(doot3.x)==504 && Math.round(doot3.y)==119){
+if(Math.round(doot3.x)==501 && Math.round(doot3.y)==122 || Math.round(doot3.y)==144){
     dot3.classList.add('active-dot');
     dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
-    countTo(10, 20);
+    countTo(10, 20, '#output');
 }else{dot3.classList.remove('active-dot');}
 
 
-if(Math.round(doot4.x)==504 && Math.round(doot4.y)==119){
+if(Math.round(doot4.x)==501 && Math.round(doot4.y)==122 || Math.round(doot4.y)==144){
     dot4.classList.add('active-dot');
     dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
     circleNext.setAttribute("disabled","disabled");
-    countTo(25,39);
+    countTo(25,39, "#output");
 }else{dot4.classList.remove('active-dot');}
 
 
@@ -338,11 +338,11 @@ if(Math.round(doot4.x)==504 && Math.round(doot4.y)==119){
 circlePrev.addEventListener('click', () => {
     circleNext.removeAttribute("disabled");
      // if(reverseRotate<=4 && reverseRotate >=1){ 
-        console.log("PrevreverseR"+reverseRotate);
-        console.log("PrevRot"+currentCircleSlideIndex);
+        // console.log("PrevreverseR"+reverseRotate);
+        // console.log("PrevRot"+currentCircleSlideIndex);
 
         rect1.style.transform = `rotate(${reverseRotate* -90}deg)`;
-        rRow.style.transform = `rotate(90deg);`
+        // rRow.style.transform = `rotate(90deg);`
         currentCircleSlideIndex--;
         reverseRotate++;
 
@@ -358,36 +358,36 @@ circlePrev.addEventListener('click', () => {
           console.log("3--"+Math.round(doot3.x) +" "+Math.round(doot3.y));
           console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
 
-if(Math.round(doot1.x)==912 && Math.round(doot1.y)==527){
+if(Math.round(doot1.x)==909 && Math.round(doot1.y)==530){
     dot1.classList.add('active-dot');
     dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
     circlePrev.setAttribute("disabled","disabled");
-    countTo(10, 23);
+    countTo(10, 23, "#output");
 }else{dot1.classList.remove('active-dot');}
 
 
-if(Math.round(doot2.x)==912 && Math.round(doot2.y)==527){
+if(Math.round(doot2.x)==909 && Math.round(doot2.y)==530){
     dot2.classList.add('active-dot');
     dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
-    countTo(5, 12);
+    countTo(5, 12, "#output");
 }else{dot2.classList.remove('active-dot');}
 
 
-if(Math.round(doot3.x)==912 && Math.round(doot3.y)==527){
+if(Math.round(doot3.x)==909 && Math.round(doot3.y)==530){
     dot3.classList.add('active-dot');
     dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
-    countTo(10, 20);
+    countTo(10, 20, "#output");
 }else{dot3.classList.remove('active-dot');}
 
 
-if(Math.round(doot4.x)==912 && Math.round(doot4.y)==527){
+if(Math.round(doot4.x)==909 && Math.round(doot4.y)==530){
     dot4.classList.add('active-dot');
     dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
-    countTo(25, 39);
+    countTo(25, 39, "#output");
 }else{dot4.classList.remove('active-dot');}
 
 

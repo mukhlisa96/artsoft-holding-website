@@ -356,10 +356,7 @@ background-size: cover;
 background-position: center center; 
 background-image: url(../img/map.jpg);
 
-scroll-snap-type: x mandatory;
-overflow-x: scroll;
-scroll-behavior: smooth;
-scrollbar-width: 10px;
+
 }
 
 .mission-block{
@@ -448,7 +445,7 @@ text-transform: initial;
 }
 
 
-ul.lang{
+ul.lang, ul.lang-mobile{
 display: flex;
 list-style: none;
 text-transform: uppercase;
@@ -461,14 +458,14 @@ left: 18%;
 z-index: 5;
 }
 
-ul.lang > li{
+ul.lang > li, ul.lang-mobile > li{
 margin: 1vh;
 cursor: pointer;
 margin-bottom: 0;
 padding-bottom: 0;
 }
 
-ul.lang > li:hover{
+ul.lang > li:hover, ul.lang-mobile > li: hover{
 border-bottom: 1px solid #fff;
 
 }
@@ -506,6 +503,8 @@ background-color: transparent;
 color: inherit;
 font-family: 'Jost', sans-serif;
 font-weight: bold;
+cursor: pointer;
+font-size: 13px;
 }
 
 .left-border.toggle{}
@@ -691,7 +690,9 @@ margin-top: -10px;
 transition: transform 0.3s ease-in;
 
 }
-
+.plus:hover{
+cursor: pointer;
+}
 .plus:hover > .plus-axis > .plus-y{
 transform: rotate(-90deg);
 transition: transform 0.3s ease-in;
@@ -1088,16 +1089,30 @@ margin-left: 12%;
 .mobile-link{
 display: none;
 }
-.lang.lang-mobile{
+ul.lang-mobile{
 display: none;
 }
 
-.lang.lang-mobile{
-display: none;
-}
+
 
 .brands-label{
 font-size:20px; text-align: center; line-height:2
+}
+
+.news-body{
+width: 80%;
+margin-left: 16%;
+padding: 50px;
+display: grid;
+grid-template-columns: 40% 40%;
+column-gap: 100px;
+}
+
+.news-block-h4{
+margin-bottom: 15px;
+}
+.date{
+font-weight: lighter;
 }
 
 .news-body{
@@ -1113,4 +1128,12 @@ column-gap: 100px;
 width: 100%;
 height: 400px;
 object-fit: cover;
+top: -35px;
+position: relative;
+}
+
+.brands-label.news-label {
+  left: 33%;
+  top: 80%;
+
 }

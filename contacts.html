@@ -33,7 +33,7 @@
         <div class="block-container">
             <div class="burger-navbar-block-2">
                 <ul class="burger-menu-links">
-                     <ul class="lang lang-mobile">
+                     <ul class="lang-mobile">
                      <li class="lang-item">уз</li>
                      <li class="lang-item">ру</li>
                      <li class="lang-item">ен</li>
@@ -148,7 +148,7 @@
                         <div class="main-heading-wrapper contact-center-heading">
                             <h1><a href="tel:+998 90 138-00-05" style="">Контакты</a></h1>
                         </div>
-                        <div class="additional-info address-line-wrapper">
+                        <div class="additional-info address-line-wrapper w-2">
                             <div class="align-left address-line">
                                 <h4>ОФИС В ТАШКЕНТЕ: ООО «ART SOFT HOLDING»</h4>
                                 <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
@@ -249,21 +249,21 @@
                     
                     <div class="form__section form__section--right">
                          <div class="form__section">
-                        <input class="form__input" placeholder="ФИО" type="text" name="name">
+                        <input class="form__input" placeholder="ФИО" type="text" name="name" required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Телефон" type="email" name="email">
+                        <input class="form__input" placeholder="Телефон" type="number" name="phone" required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Компания" type="password" name="password">
-                    </div>
-
-                    <div class="form__section">
-                        <input class="form__input" placeholder="Почта" type="password" name="password">
+                        <input class="form__input" placeholder="Компания" type="text" name="company" required>
                     </div>
 
                     <div class="form__section">
-                        <textarea class="form__input" placeholder="Компания" type="password" name="password"></textarea>
+                        <input class="form__input" placeholder="Почта" type="email" name="email" required>
+                    </div>
+
+                    <div class="form__section">
+                        <textarea class="form__input" placeholder="Сообщение..." type="text" name="message"></textarea>
                     </div> 
                         <button class="btn btn--default form__close my_form__close" id="my_form_close" style="margin-right: 20px;">Закрыть</button>
                         <button class="btn btn--default">Отправить</button>
