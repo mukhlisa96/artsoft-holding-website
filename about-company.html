@@ -624,8 +624,13 @@
 
 scrolling.onscroll = function (e) {  
             var scroll = scrolling.scrollTop;
-            console.log(scroll);
-                if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
+            if (scroll >= 250) {
+                $(".lang").hide();
+                $(".sound-control").hide();
+                // $(".lang.lang-mobile").hide();
+            }else{$(".lang").show();
+                  $(".sound-control").show();
+            }
   
                 if (scroll <= 500) {
                     body.removeClass('dark-font').addClass("light-font");
