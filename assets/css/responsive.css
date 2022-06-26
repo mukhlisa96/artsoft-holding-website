@@ -298,7 +298,9 @@ scrollbar-width: thin;
 overflow-x: scroll;
 }
 
-
+#succesModal{
+    left: 0;
+}
 
 /*max-width: 768px*/}
 

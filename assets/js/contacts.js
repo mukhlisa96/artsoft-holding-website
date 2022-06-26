@@ -173,3 +173,15 @@ $(".sound-control").click(function () {
     }
     console.log($("#myVideo").prop('muted'))
 });
+
+// let sendForm = document.querySelector(".meSend");
+// let succesModal = document.querySelector(".succesModal");
+
+// let closeSuccesModal = document.querySelector(".closeSuccesModal");
+// sendForm.addEventListener('click', () => {
+// alert("suc");
+//     succesModal.style.display = "block";
+// });
+// closeSuccesModal.addEventListener('click', () => {
+//     succesModal.style.display = "none";
+// });

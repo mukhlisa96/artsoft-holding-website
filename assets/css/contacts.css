@@ -142,3 +142,30 @@
     text-align: center;
     line-height: 1.8;
 }
+
+#succesModal{
+    /*display: none;*/
+    background-color: #42567a;
+    padding: 30px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    z-index: 2000;
+    cursor: pointer;
+    display: none;
+    top: 20%;
+    left: 25%;
+
+}
+
+.closeSuccesModal{
+    color: white;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 50;
+}

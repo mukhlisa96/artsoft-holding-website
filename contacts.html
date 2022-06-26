@@ -29,6 +29,7 @@
 </head>
 
 <body>
+
     <div class="burger-navbar">
         <div class="block-container">
             <div class="burger-navbar-block-2">
@@ -169,7 +170,7 @@
     <div class="feedback-wrapper">
         <div class="feedback-middle">
             <div class="feedback-heading">
-                <h2>Обратная связь</h2>
+                <h2 class="">Обратная связь</h2>
                 <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
             </div>
             <div class="feedback-form">
@@ -234,11 +235,12 @@
     </div>
 
 
+  
 
          <section class="form">
                 <button class="btn btn--close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
                 <form class="form__inner flexy flexy--center" action="">
-                    <h3 class="form__section form__section--title">Форма для связи</h3>
+                    <h3 class="form__section form__section--title sendForm">Форма для связи</h3>
                     
 
                     <div class="form__section">
@@ -253,30 +255,48 @@
                     
                     <div class="form__section form__section--right">
                          <div class="form__section">
-                        <input class="form__input" placeholder="ФИО" type="text" name="name" required>
+                        <input class="form__input" placeholder="ФИО" type="text" name="name">
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Телефон" type="number" name="phone" required>
+                        <input class="form__input" placeholder="Телефон" type="number" name="phone">
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Компания" type="text" name="company" required>
+                        <input class="form__input" placeholder="Компания" type="text" name="company">
                     </div>
 
                     <div class="form__section">
-                        <input class="form__input" placeholder="Почта" type="email" name="email" required>
+                        <input class="form__input" placeholder="Почта" type="email" name="email">
                     </div>
 
                     <div class="form__section">
                         <textarea class="form__input" placeholder="Сообщение..." type="text" name="message"></textarea>
                     </div> 
                         <button class="btn btn--default form__close my_form__close" id="my_form_close" style="margin-right: 20px;">Закрыть</button>
-                        <button class="btn btn--default">Отправить</button>
+                        <button class="btn btn--default sendForm" id="" value="Submit" type="submit">Отправить</button>
+
 
 
 
                     </div>
+
                 </form>
             </section>
+
+
+  <div id='succesModal' class=' fade succesModal'>
+      <div class='modal-dialog modal-confirm'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            
+            <a class="closeSuccesModal" type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</a>
+          </div>
+          <div class='modal-body text-center'>
+            <h4>Отправлнно!</h4> 
+            <p>Мы свяжемся с вами в ближайшее время.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 </body>
@@ -286,6 +306,16 @@
 <script src="assets/js/contacts.js"></script>
 <script src="assets/js/blockreveals/anime.min.js"></script>
 <script src="assets/js/blockreveals/main.js"></script>
+<script type="text/javascript">
+  
+
+ document.querySelector(".closeSuccesModal").addEventListener('click', () => {
+                    document.querySelector(".succesModal").style.display = "none";
+                });
+// var zInd = getStyle ( ".sendForm" , "z-index" );
+//  alert( zInd );
+
+</script>
         <script>
         (function() {
             var formEl = document.querySelector('section.form'),
@@ -321,7 +351,14 @@
                 });
             }
 
-            formEl.addEventListener('submit', function(ev) {ev.preventDefault();});
+            formEl.addEventListener('submit', function(ev) {
+                 document.querySelector(".succesModal").style.display = "block";
+
+               
+                ev.preventDefault();
+
+
+            });
         })();
         </script>
 

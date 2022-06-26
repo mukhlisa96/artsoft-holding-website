@@ -1,11 +1,33 @@
 
+body, html{
+  scrollbar-width: none;
+  /*overflow: hidden;*/
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none;
+}
 
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;
-}
+  scrollbar-width: none;
 
+}
+.center-block-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+  scrollbar-width: none;
+
+}
 .plus-container::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -293,7 +315,7 @@ z-index: 0;
 scroll-snap-type: y mandatory;
 overflow-y: scroll;
 scroll-behavior: smooth;
-/*overflow-x: hidden;*/
+overflow-x: hidden;
 scrollbar-width: none
 }
 

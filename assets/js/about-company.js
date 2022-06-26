@@ -405,6 +405,14 @@ let playBtn = document.querySelector(".play-btn");
 let playLabel = document.querySelector(".play-label");
 let closeVideoCircle = document.querySelector("#closeVideoCircle");
 let playingCircleVideo = document.querySelector("#playingCircleVideo");
+let vidC = document.querySelector(".circle-video");
+
+
+vidC.addEventListener('click', () => {
+    playingCircleVideo.style.display = "block";
+    document.querySelector(".video-blacklayer").style.display = "block";
+    closeVideoCircle.style.display = "block";
+});
 
 playBtn.addEventListener('click', () => {
     playingCircleVideo.style.display = "block";
