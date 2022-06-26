@@ -10,7 +10,7 @@ overflow-y: scroll;
 -ms-overflow-style: none;
 overflow: -moz-scrollbars-none;
 scrollbar-width: none;
-scrollbar-width: none;
+
 font-family: "Jost", sans-serif;
 }
 
@@ -196,7 +196,8 @@ justify-content: center;
 font-size: 12px;
 font-weight: lighter;
 /*display: none;*/
-visibility: hidden;
+/*visibility: hidden;*/
+cursor: pointer;
 }
 
 /*sidebar right start*/
@@ -1115,25 +1116,22 @@ margin-bottom: 15px;
 font-weight: lighter;
 }
 
-.news-body{
-width: 80%;
-margin-left: 16%;
-padding: 50px;
-display: grid;
-grid-template-columns: 40% 40%;
-column-gap: 100px;
+
+
+.bottom-btn-wrapper{
+    display: flex;
+justify-content: center;
+align-items: end;
 }
 
-.news-desc-img{
-width: 100%;
-height: 400px;
-object-fit: cover;
-top: -35px;
-position: relative;
+.voiceon_img{
+    display: none;
 }
 
-.brands-label.news-label {
-  left: 33%;
-  top: 80%;
+.partners-heading{
+    padding-top: 18%;
+}
 
+.become-partner-block{
+    padding-top: 0;
 }

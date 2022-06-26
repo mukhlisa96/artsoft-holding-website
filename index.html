@@ -24,7 +24,7 @@
                      <li class="lang-item">ен</li>
                    </ul>
                     <li class="burger-menu-link"><a href="about-company.html">О компании</a></li>
-                    <li class="burger-menu-link"><a href="index.html#1">Деятельность</a></li>
+                    <li class="burger-menu-link" id="main-activity-link"><a href="index.html#1">Деятельность</a></li>
                     <li class="burger-menu-link"><a href="brands.html">Бренды</a></li>
                     <li class="burger-menu-link"><a href="partners.html">Партнерство</a></li>
                     <li class="burger-menu-link"><a href="contacts.html">Контакты</a></li>
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="mobile-main-1-footer">
+  <!--   <div class="mobile-main-1-footer">
         <div class="mf-first-row">
             <div class="m-sound-control">
                 Звук
@@ -69,7 +69,7 @@
                 <i class="fa fa-angle-up"></i>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="slider-container">
         <div class="left-sidebar absolute-border">
@@ -93,6 +93,9 @@
                  </div>
                 <div class="sound-control">
                     <div class="sound-visual">
+
+                        <img class="voiceon_img" src="assets/img/v.gif"  width="50">
+                        <div class="play-lines">
                         <div class="play-line"></div>
                         <div class="play-line"></div>
                         <div class="play-line"></div>
@@ -106,7 +109,8 @@
                         <div class="play-line"></div>
                         <div class="play-line"></div>
                     </div>
-                    <div>Включить звук</div>
+                    </div>
+                    <div class="s-c-label">Включить звук</div>
                 </div>             
         </div>
         <div class="middle-line absolute-border"></div>
@@ -130,7 +134,7 @@
                             </div>
 
                             <div class="main-1-bottom-text">
-                                <div>
+                                <div class="bottom-btn-wrapper">
                                    <a type="button" class="btn-one" href="about-company.html">О компании</a>
                                 </div>
                                 <div class="main-1-bottom-p">
@@ -535,10 +539,12 @@ scrolling.onscroll = function (e) {
             var scroll = scrolling.scrollTop;
             if (scroll >= 250) {
                 $(".lang").hide();
+                $(".sound-control").hide();
                 // $(".lang.lang-mobile").hide();
             }else{$(".lang").show();
+                  $(".sound-control").show();
             }
-  
+  console.log(scroll);
               if(scroll<=1100){
                      body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");

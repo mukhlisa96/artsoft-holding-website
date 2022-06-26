@@ -26,6 +26,31 @@ let absoluteBorder = document.querySelectorAll('.absolute-border');
             let middleLine = document.querySelector('.middle-line');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
+$("#myVideo").prop('muted', true);
+
+$(".sound-control").click(function () {
+    if ($("#myVideo").prop('muted')) {
+        $("#myVideo").prop('muted', false);
+        $(".s-c-label").text("Отключить звук");
+         $('.voiceon_img').show();
+         $('.play-lines').hide();
+        $(this).addClass('unmute-video'); // changing icon for button
+
+    } else {
+        $("#myVideo").prop('muted', true);
+        $(".s-c-label").text("Включить звук");
+         $('.voiceon_img').hide();
+         $('.play-lines').show();
+        $(this).removeClass('unmute-video'); // changing icon for button
+    }
+    console.log($("#myVideo").prop('muted'))
+});
+
+
+
+
+
+
 document.querySelectorAll(".menu-link").forEach((mLink, ind)=>{
 mLink.addEventListener('click', ()=>{
           if (ind ==2 || ind == 3) {
@@ -104,6 +129,32 @@ controlClose = document.querySelector('.control-close');
 leftMenu = document.querySelector('.left-menu');
 contactInfo = document.querySelector('.burger-navbar-block-3');
 menuIcon = document.querySelector('.menu-icon');
+
+
+document.querySelector("#main-activity-link").addEventListener('click', () => {
+     nav.classList.toggle('burger-nav-active');
+
+        controlOpen.classList.toggle('pull-right');
+        controlClose.classList.toggle('pull-left');
+        leftMenu.classList.toggle('disappear');
+
+        if (contactInfo.style.animation) {
+            contactInfo.style.animation = '';
+           } else {
+              contactInfo.style.animation = `contactInfoFade 1s ease forwards 1s`;
+           }
+
+        navLinks.forEach((link, index) => {
+           if (link.style.animation) {
+            link.style.animation = '';
+           } else {
+             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.6}s`;
+           }
+        });
+
+        burger.classList.toggle('toggle');
+});
+
 
 burger.addEventListener('click', () => {
 

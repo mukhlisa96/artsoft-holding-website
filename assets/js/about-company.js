@@ -448,3 +448,23 @@ $(document).ready(function(){
     nav:true
   });
 });
+
+$("#myVideo").prop('muted', true);
+
+$(".sound-control").click(function () {
+    if ($("#myVideo").prop('muted')) {
+        $("#myVideo").prop('muted', false);
+        $(".s-c-label").text("Отключить звук");
+         $('.voiceon_img').show();
+         $('.play-lines').hide();
+        $(this).addClass('unmute-video'); // changing icon for button
+
+    } else {
+        $("#myVideo").prop('muted', true);
+        $(".s-c-label").text("Включить звук");
+         $('.voiceon_img').hide();
+         $('.play-lines').show();
+        $(this).removeClass('unmute-video'); // changing icon for button
+    }
+    console.log($("#myVideo").prop('muted'))
+});

@@ -59,8 +59,11 @@
                          <li class="menu-link"><span class="menu-link-span"></span><a href="#1">  Стать поставщиком</a></li>
                      </ul>
                  </div>
-                <div class="sound-control">
+              <div class="sound-control">
                     <div class="sound-visual">
+
+                        <img class="voiceon_img" src="assets/img/v.gif"  width="50">
+                        <div class="play-lines">
                         <div class="play-line"></div>
                         <div class="play-line"></div>
                         <div class="play-line"></div>
@@ -74,8 +77,9 @@
                         <div class="play-line"></div>
                         <div class="play-line"></div>
                     </div>
-                    <div>Включить звук</div>
-                </div>             
+                    </div>
+                    <div class="s-c-label">Включить звук</div>
+                </div>            
         </div>
         <div class="middle-line absolute-border"></div>
         <ul class="lang">
@@ -92,7 +96,7 @@
                           <source src="assets/video/bg.mp4" type="video/mp4">
                         </video>
                         <div class="blacklayer"></div>
-                        <div class="main-heading-wrapper">
+                        <div class="main-heading-wrapper partners-heading">
                             <h1>Партнерство</h1>
                         </div>
                         
@@ -170,9 +174,11 @@
                      <svg width="15" height="34" viewBox="0 0 22 34" xmlns="http://www.w3.org/2000/svg"><rect x=".75" y=".75" width="20.5" height="32.5" rx="9.25" fill="transparent" stroke="white"></rect><path d="M11 8v8" fill="transparent" stroke="white"></path></svg>
                  </div>
             </div>
-        </div>
+        </div> 
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/js/about-company.js"></script>
 
@@ -210,6 +216,27 @@ scrolling.onscroll = function (e) {
 
                 }
             }
+
+
+$("#myVideo").prop('muted', true);
+
+$(".sound-control").click(function () {
+    if ($("#myVideo").prop('muted')) {
+        $("#myVideo").prop('muted', false);
+        $(".s-c-label").text("Отключить звук");
+         $('.voiceon_img').show();
+         $('.play-lines').hide();
+        $(this).addClass('unmute-video'); // changing icon for button
+
+    } else {
+        $("#myVideo").prop('muted', true);
+        $(".s-c-label").text("Включить звук");
+         $('.voiceon_img').hide();
+         $('.play-lines').show();
+        $(this).removeClass('unmute-video'); // changing icon for button
+    }
+    console.log($("#myVideo").prop('muted'))
+});
 
 </script>
 </html>
