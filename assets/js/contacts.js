@@ -104,7 +104,8 @@ menuIcon = document.querySelector('.menu-icon');
 burger.addEventListener('click', () => {
 
         nav.classList.toggle('burger-nav-active');
-
+        soundControl = document.querySelector(".sound-control");
+        soundControl.classList.toggle("toggle-opacity");
         controlOpen.classList.toggle('pull-right');
         controlClose.classList.toggle('pull-left');
         leftMenu.classList.toggle('disappear');
@@ -185,3 +186,7 @@ $(".sound-control").click(function () {
 // closeSuccesModal.addEventListener('click', () => {
 //     succesModal.style.display = "none";
 // });
+
+ $(document).on('click', '.menu-link', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+ });

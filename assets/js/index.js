@@ -53,6 +53,8 @@ $(".sound-control").click(function () {
 
 document.querySelectorAll(".menu-link").forEach((mLink, ind)=>{
 mLink.addEventListener('click', ()=>{
+// mLink.classList.add("active");
+
           if (ind ==2 || ind == 3) {
                         nav.style.background = 'rgb(199, 201, 206) none repeat scroll 0% 0%';
 
@@ -159,7 +161,8 @@ document.querySelector("#main-activity-link").addEventListener('click', () => {
 burger.addEventListener('click', () => {
 
         nav.classList.toggle('burger-nav-active');
-
+        soundControl = document.querySelector(".sound-control");
+        soundControl.classList.toggle("toggle-opacity");
         controlOpen.classList.toggle('pull-right');
         controlClose.classList.toggle('pull-left');
         leftMenu.classList.toggle('disappear');
@@ -251,3 +254,25 @@ let modalOpenBtns = document.querySelectorAll(".plus");
             
           });
         });
+
+
+ $(document).on('click', '.menu-link', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+ });
+
+
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     const square = entry.target.querySelector('.center-block');
+
+//     if (entry.isIntersecting) {
+//       square.classList.add('square-transition');
+//       return; // if we added the class, exit the function
+//     }
+
+//     // We're not intersecting, so remove the class!
+//     square.classList.remove('square-transition');
+//   });
+// });
+
+// observer.observe(document.querySelector('.center-block-wrapper'));

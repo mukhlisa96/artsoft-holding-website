@@ -42,7 +42,8 @@ menuIcon = document.querySelector('.menu-icon');
 burger.addEventListener('click', () => {
 
         nav.classList.toggle('burger-nav-active');
-
+        // soundControl = document.querySelector(".sound-control");
+        // soundControl.classList.toggle("toggle-opacity");
         controlOpen.classList.toggle('pull-right');
         controlClose.classList.toggle('pull-left');
         leftMenu.classList.toggle('disappear');
@@ -179,4 +180,38 @@ circles.forEach((c, index)=> {
  $(window).scroll(function () {
          var scroll = $(window).scrollTop();
          if (scroll >= 250) {$(".lang").hide();}else{$(".lang").show();}
+});
+
+ $(document).on('click', '.menu-link', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+ });
+
+ var brandsDescBtn = document.querySelector('.brands-desc-btn');
+ var brandsModal = document.querySelector('.brands-modal');
+ var closeBrandsModal = document.querySelector(".close-brands-modal");
+
+ brandsDescBtn.addEventListener('click', ()=>{
+    brandsModal.classList.add('show');
+    menuIcon.style.opacity = 0;
+    closeBrandsModal.style.display = "block";
+    burger.style.display = "none";
+    leftMenu.classList.toggle('disappear');
+    // burgerLine1.style.display = "none";
+    // burgerLine2.style.display = "none";
+    // burger.innerHTML="<div class='close-brands-modal'></div>";
+
+ });
+
+closeBrandsModal.addEventListener('click', ()=>{
+    brandsModal.classList.remove('show');
+    menuIcon.style.opacity = 1;
+    closeBrandsModal.style.display = "none";
+    burger.style.display = "flex";
+    leftMenu.classList.toggle('disappear');
+
+    //  burgerLine1.style.display = "block";
+    // burgerLine2.style.display = "block";
+
+
+    // burger.innerHTML="<div class='control-open'>МЕНЮ</div><div class='control-close'>ЗАКРЫТЬ</div>";
 });

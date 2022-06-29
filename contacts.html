@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/about-company.css">
     <link rel="stylesheet" type="text/css" href="assets/css/contacts.css">
         <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/contacts-responsive.css">
 
     <title>ART SOFT - Контакты</title>
 
@@ -136,34 +137,39 @@
                          </div>
                      </div>
                 </div>
+                        
 
                 <div class="center-block contacts-middle-block" id="1">
-                    <div class="additional-info info-top address-line-wrapper" >
-                             <div class="align-left address-line">
+
+                   
+
+                    <div class="address-line-wrapper" >
+                             <div class="address-line">
                                 <h4>ГЛАВНЫЙ ОФИС: ООО «ART SOFT HOLDING»</h4>
                                 <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
                                 <p>160137, Узбекистан, г. Наманган, ул.Касансайская, 24.</p>
                             </div>
-                            <div class="align-left address-line">
+                            <div class="address-line">
                                 <h4>ГЛАВНЫЙ ОФИС: ООО «ART SOFT HOLDING»</h4>
                                 <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
                                 <p>160137, Узбекистан, г. Наманган, ул.Касансайская, 24.</p>
+                            </div>
+                        
+                       
+                            <div class="address-line">
+                                <h4>ОФИС В ТАШКЕНТЕ: ООО «ART SOFT HOLDING»</h4>
+                                <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
+                                <p>100069 , Республика Узбекистан, г. Ташкент, Алмазарский р-н., ул.Карасарайская, 269</p>
+                            </div>
+                            <div class="address-line">
+                                <h4>ОФИС В ТАШКЕНТЕ: ООО «ART SOFT HOLDING»</h4>
+                                <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
+                                <p>100069 , Республика Узбекистан, г. Ташкент, Алмазарский р-н., ул.Карасарайская, 269</p>
                             </div>
                         </div>
-                        <div class="main-heading-wrapper contact-center-heading">
+
+                         <div class="contact-center-heading">
                             <h1><a href="tel:+998 90 138-00-05" style="">Контакты</a></h1>
-                        </div>
-                        <div class="additional-info address-line-wrapper w-2">
-                            <div class="align-left address-line">
-                                <h4>ОФИС В ТАШКЕНТЕ: ООО «ART SOFT HOLDING»</h4>
-                                <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
-                                <p>100069 , Республика Узбекистан, г. Ташкент, Алмазарский р-н., ул.Карасарайская, 269</p>
-                            </div>
-                            <div class="align-left address-line">
-                                <h4>ОФИС В ТАШКЕНТЕ: ООО «ART SOFT HOLDING»</h4>
-                                <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
-                                <p>100069 , Республика Узбекистан, г. Ташкент, Алмазарский р-н., ул.Карасарайская, 269</p>
-                            </div>
                         </div>
                 </div>
  <div class="center-block feedback-block" id="2">
@@ -174,10 +180,10 @@
                 <a href="mailto:info@artsofttex.uz">info@artsofttex.uz</a>
             </div>
             <div class="feedback-form">
-                <div class="feedback-circle-wrapper">
+                <div class="feedback-circle-wrapper btn--form-open">
                     <div class="circle-text">Заполнить форму</div>
                 <div class="feedback-circle">
-                    <button class="btn--form-open little-circle"><i class="fa fa-angle-right"></i></button>
+                    <button class=" little-circle"><i class="fa fa-angle-right"></i></button>
                     
                 
                 </div>
@@ -203,6 +209,11 @@
                 <li class="feedback-footer-link"><a href="partners.html">Партнерство</a></li>
                 <li class="feedback-footer-link"><a href="contacts.html">Контакты</a></li>
             </ul>
+
+            <div class="copyright-div">
+                <div class="copyright">© 1999–2022 «Art Soft»</div>
+                <div class="made-by">Made by Fluggti Agency</div>
+            </div>
         </div>
     </div>
  </div>
@@ -248,29 +259,33 @@
                         <p>Заполните форму обратной связи, если у вас остались вопросы или пожелания. Мы свяжемся с вами в ближайшее время</p>
 
                             <br><br> <br><br> 
-                         <p><input type="checkbox" name=""> Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных</p>
+                         <input type="checkbox" name="" required> 
+                         <label class="checkbox-label">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных</label>
                     </div>
                    
                    
                     
                     <div class="form__section form__section--right">
                          <div class="form__section">
-                        <input class="form__input" placeholder="ФИО" type="text" name="name">
+                        <input class="form__input" placeholder="ФИО" type="text" name="name"required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Телефон" type="number" name="phone">
+                        <input class="form__input" placeholder="Телефон" type="number" name="phone" required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Компания" type="text" name="company">
+                        <input class="form__input" placeholder="Компания" type="text" name="company" required>
                     </div>
 
                     <div class="form__section">
-                        <input class="form__input" placeholder="Почта" type="email" name="email">
+                        <input class="form__input" placeholder="Почта" type="email" name="email" required>
                     </div>
 
                     <div class="form__section">
                         <textarea class="form__input" placeholder="Сообщение..." type="text" name="message"></textarea>
                     </div> 
+                    <div class="form__section">
+                        <input class="form__input" placeholder="Прикрепить файл" type="file" name="file" required>
+                    </div>
                         <button class="btn btn--default form__close my_form__close" id="my_form_close" style="margin-right: 20px;">Закрыть</button>
                         <button class="btn btn--default sendForm" id="" value="Submit" type="submit">Отправить</button>
 

@@ -105,7 +105,8 @@ menuIcon = document.querySelector('.menu-icon');
 burger.addEventListener('click', () => {
 
         nav.classList.toggle('burger-nav-active');
-
+        soundControl = document.querySelector(".sound-control");
+        soundControl.classList.toggle("toggle-opacity");
         controlOpen.classList.toggle('pull-right');
         controlClose.classList.toggle('pull-left');
         leftMenu.classList.toggle('disappear');
@@ -269,7 +270,7 @@ rRow = document.querySelector(".r-row");
 var el = document.querySelector(".rect");
 
 var st = window.getComputedStyle(el, null);
-var activeDotIndex = document.querySelector(".active-dot-index");
+var activeDotIndex = document.querySelector(".active-dot-index1");
 
 circleNext.addEventListener('click', () => {
 circlePrev.removeAttribute("disabled");
@@ -294,7 +295,7 @@ circlePrev.removeAttribute("disabled");
           console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
 
 
-if(Math.round(doot1.x)==501 && Math.round(doot1.y)==122 || Math.round(doot1.y)==144){
+if(currentCircleSlideIndex==1){
     dot1.classList.add('active-dot');
     dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
@@ -302,7 +303,7 @@ if(Math.round(doot1.x)==501 && Math.round(doot1.y)==122 || Math.round(doot1.y)==
 }else{dot1.classList.remove('active-dot');}
 
 
-if(Math.round(doot2.x)==501 && Math.round(doot2.y)==122 || Math.round(doot2.y)==144){
+if(currentCircleSlideIndex==2){
     dot2.classList.add('active-dot');
     dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
@@ -310,7 +311,7 @@ if(Math.round(doot2.x)==501 && Math.round(doot2.y)==122 || Math.round(doot2.y)==
 }else{dot2.classList.remove('active-dot');}
 
 
-if(Math.round(doot3.x)==501 && Math.round(doot3.y)==122 || Math.round(doot3.y)==144){
+if(currentCircleSlideIndex==3){
     dot3.classList.add('active-dot');
     dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
@@ -318,7 +319,7 @@ if(Math.round(doot3.x)==501 && Math.round(doot3.y)==122 || Math.round(doot3.y)==
 }else{dot3.classList.remove('active-dot');}
 
 
-if(Math.round(doot4.x)==501 && Math.round(doot4.y)==122 || Math.round(doot4.y)==144){
+if(currentCircleSlideIndex==4){
     dot4.classList.add('active-dot');
     dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
@@ -358,7 +359,7 @@ circlePrev.addEventListener('click', () => {
           console.log("3--"+Math.round(doot3.x) +" "+Math.round(doot3.y));
           console.log("4--"+Math.round(doot4.x) +" "+Math.round(doot4.y));
 
-if(Math.round(doot1.x)==909 && Math.round(doot1.y)==530){
+if(currentCircleSlideIndex==1){
     dot1.classList.add('active-dot');
     dotLabel.innerHTML = "Молочные продукты";
     activeDotIndex.innerHTML = "01";
@@ -367,7 +368,7 @@ if(Math.round(doot1.x)==909 && Math.round(doot1.y)==530){
 }else{dot1.classList.remove('active-dot');}
 
 
-if(Math.round(doot2.x)==909 && Math.round(doot2.y)==530){
+if(currentCircleSlideIndex==2){
     dot2.classList.add('active-dot');
     dotLabel.innerHTML = "Мясопереработка";
     activeDotIndex.innerHTML = "02";
@@ -375,7 +376,7 @@ if(Math.round(doot2.x)==909 && Math.round(doot2.y)==530){
 }else{dot2.classList.remove('active-dot');}
 
 
-if(Math.round(doot3.x)==909 && Math.round(doot3.y)==530){
+if(currentCircleSlideIndex==3){
     dot3.classList.add('active-dot');
     dotLabel.innerHTML = "Ткани";
     activeDotIndex.innerHTML = "03";
@@ -383,7 +384,7 @@ if(Math.round(doot3.x)==909 && Math.round(doot3.y)==530){
 }else{dot3.classList.remove('active-dot');}
 
 
-if(Math.round(doot4.x)==909 && Math.round(doot4.y)==530){
+if(currentCircleSlideIndex==4){
     dot4.classList.add('active-dot');
     dotLabel.innerHTML = "Назиания продукта 4";
     activeDotIndex.innerHTML = "04";
@@ -453,6 +454,7 @@ $(document).ready(function(){
 
     loop:true,
     items:1,
+    responsiveClass:true,
     nav:true
   });
 });
@@ -476,3 +478,8 @@ $(".sound-control").click(function () {
     }
     console.log($("#myVideo").prop('muted'))
 });
+
+
+ $(document).on('click', '.menu-link', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+ });

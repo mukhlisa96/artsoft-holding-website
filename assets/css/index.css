@@ -1,9 +1,11 @@
 
 body, html{
   scrollbar-width: none;
-  /*overflow: hidden;*/
+  overflow: hidden;
   -ms-overflow-style: none;
   overflow: hidden;
+  background-color: white;
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -19,6 +21,7 @@ body::-webkit-scrollbar {
   height: 0;
   display: none;
   scrollbar-width: none;
+  opacity: 0;
 
 }
 .center-block-wrapper::-webkit-scrollbar {
@@ -26,6 +29,7 @@ body::-webkit-scrollbar {
   height: 0;
   display: none;
   scrollbar-width: none;
+  overflow: hidden;
 
 }
 .plus-container::-webkit-scrollbar {
@@ -64,6 +68,7 @@ font-family: "Jost", sans-serif;
 
 body::-webkit-scrollbar {
 display: none;  /* Safari and Chrome */
+opacity: 0;
 scrollbar-width: none;
 }
 .left-menu.disappear{
@@ -82,7 +87,7 @@ transition-delay: 1s;
 
 }
 .blacklayer{
-position: fixed;
+position: absolute;
 top: 0;
 left: 0;
 width: 100%;
@@ -246,6 +251,8 @@ font-weight: lighter;
 /*display: none;*/
 /*visibility: hidden;*/
 cursor: pointer;
+z-index: 2;
+opacity: 1;
 }
 
 /*sidebar right start*/
@@ -306,7 +313,7 @@ position: absolute;
 top: 0;
 /*left: 18%;*/
 width: 100%;
-/*background: blue;*/
+background-color: white;
 display: flex;
 flex-direction: column;
 /*height: 400%;*/
@@ -317,11 +324,26 @@ overflow-y: scroll;
 scroll-behavior: smooth;
 overflow-x: hidden;
 scrollbar-width: none
+/*transition: all 1s ease-out;*/
 }
 
 .center-block{
 height: 100vh;
 scroll-snap-align: start;
+/*animation: blockScroll 1s;*/
+/*transition: all 1s ease-out;*/
+}
+
+@keyframes blockScroll{
+    from{
+opacity: 0;
+transform: translateY(150px);
+    }
+    to{
+opacity: 1;
+transform: translateY(0px);
+
+    }
 }
 
 .burger-navbar{
@@ -898,7 +920,10 @@ justify-content: space-between;
 align-items: center;
 width: 70%;
 }
-
+div.news-wrapper{
+    margin-left: 7%;
+width: 70%;
+}
 .mission-wrapper > .row, .news-wrapper > .row{
 flex: 1;
 /*background-color: yellow;*/
@@ -1177,6 +1202,8 @@ align-items: end;
 
 .voiceon_img{
     display: none;
+    margin: -16px;
+    padding-right: 10px;
 }
 
 .partners-heading{
@@ -1202,7 +1229,14 @@ div.news-wrapper{
     padding: 20px;
      width: 100%;
     margin-left: 0;
-    padding-top: 100px;
+    /*padding-top: 100px;*/
 }
 
     }
+
+.all-brands-wrapper-item img{
+   max-width: 100%;
+}
+.toggle-opacity{
+    opacity: 0;
+}

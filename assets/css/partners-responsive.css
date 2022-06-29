@@ -1,0 +1,35 @@
+
+  @media only screen and (max-width: 1024px){
+ul.lang {
+  left: 25%;
+}
+.p-bottom{
+width: 300px;
+}
+}
+
+@media only screen and (max-width: 768px){
+.p-bottom{
+    bottom: 25%;
+}
+.sound-control{
+    left: 40px;
+}
+.become-partner-wrapper{
+    padding-top: 0;
+}
+.become-partner-row-1{
+    justify-content: space-around;
+}
+}
+
+@media only screen and (max-width: 412px){
+    .sound-control {
+  left: 10px;
+  top: 70%;
+}
+
+.become-partner-row-1 h2, .become-partner-row-1 h3{
+margin-bottom: 30px;
+}
+}
