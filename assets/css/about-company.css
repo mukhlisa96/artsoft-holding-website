@@ -285,7 +285,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 position: absolute;
-top: 19%;
+top: 20vh;
 left: 37%;
 z-index: 1;
 
@@ -293,7 +293,7 @@ z-index: 1;
 
 .h-slider-wrapper{
 position: absolute;
-top: 80%;
+top: 85vh;
 left: 20%;
 width: 100%;
 }
@@ -537,10 +537,35 @@ justify-content: center;
 .products-wrapper-item:hover{
 transition: linear 0.5s;
 border: 5px solid white;
-background-color: white;
+/*background-color: white;*/
+background-image: url(../img/contact-bg.jpg);
+background-position: center;
 color: lightblue;
 }
 
+
+.products-wrapper-item:nth-child(1):hover{
+background-image: url(../img/contact-bg.jpg);
+}
+
+.products-wrapper-item:nth-child(2):hover{
+background-image: url(../img/contact-bg.jpg);
+}
+
+.products-wrapper-item:nth-child(3):hover{
+background-image: url(../img/contact-bg.jpg);
+}
+
+.products-wrapper-item:nth-child(4):hover{
+background-image: url(../img/contact-bg.jpg);
+}
+
+.products-wrapper-item:nth-child(5):hover{
+background-image: url(../img/contact-bg.jpg);
+}
+.products-wrapper-item:nth-child(6):hover{
+background-image: url(../img/contact-bg.jpg);
+}
 .rect{
 height: 580px;
 width: 580px;

@@ -269,7 +269,7 @@ reverseRotate = 1;
 rRow = document.querySelector(".r-row");
 var el = document.querySelector(".rect");
 
-var st = window.getComputedStyle(el, null);
+// var st = window.getComputedStyle(el, null);
 var activeDotIndex = document.querySelector(".active-dot-index1");
 
 circleNext.addEventListener('click', () => {
@@ -479,7 +479,24 @@ $(".sound-control").click(function () {
     console.log($("#myVideo").prop('muted'))
 });
 
-
  $(document).on('click', '.menu-link', function(){
     $(this).addClass('active').siblings().removeClass('active');
  });
+ 
+cbw = document.querySelector('.center-block-wrapper');
+cbw.addEventListener('scroll', ()=>{
+    let contentBlocks = document.querySelectorAll('.center-block');
+    contentBlocks.forEach((content, index)=>{
+
+      // document.getElementById(index).classList.add('active');
+        let contentPosition = content.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+        if (contentPosition<screenPosition){
+
+            content.classList.add('active-w');
+        }else{
+            content.classList.remove('active-w');
+
+        }
+    });
+});

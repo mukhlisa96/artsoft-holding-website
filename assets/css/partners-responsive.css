@@ -18,6 +18,15 @@ width: 300px;
 .become-partner-wrapper{
     padding-top: 0;
 }
+.become-partner-wrapper{
+
+grid-template-columns: 100%;
+width: 100%;
+padding: 20px;
+margin: 0;
+padding-top: 100px;
+}
+
 .become-partner-row-1{
     justify-content: space-around;
 }

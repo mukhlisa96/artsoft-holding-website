@@ -1,4 +1,4 @@
-body = document.querySelector('body');
+var body = document.querySelector('body');
 
 
 
@@ -259,20 +259,21 @@ let modalOpenBtns = document.querySelectorAll(".plus");
  $(document).on('click', '.menu-link', function(){
     $(this).addClass('active').siblings().removeClass('active');
  });
+ 
+cbw = document.querySelector('.center-block-wrapper');
+cbw.addEventListener('scroll', ()=>{
+    let contentBlocks = document.querySelectorAll('.center-block');
+    contentBlocks.forEach((content, index)=>{
 
+      // document.getElementById(index).classList.add('active');
+        let contentPosition = content.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+        if (contentPosition<screenPosition){
 
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     const square = entry.target.querySelector('.center-block');
+            content.classList.add('active-w');
+        }else{
+            content.classList.remove('active-w');
 
-//     if (entry.isIntersecting) {
-//       square.classList.add('square-transition');
-//       return; // if we added the class, exit the function
-//     }
-
-//     // We're not intersecting, so remove the class!
-//     square.classList.remove('square-transition');
-//   });
-// });
-
-// observer.observe(document.querySelector('.center-block-wrapper'));
+        }
+    });
+});

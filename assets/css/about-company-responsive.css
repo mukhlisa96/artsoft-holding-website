@@ -31,6 +31,7 @@
 .h-circle{
     left: 0;
     width: 100%;
+    top: -40vh;
 }
  .h-years-container{
     width: 100%;
@@ -44,6 +45,7 @@
   overflow: scroll;
   left: 10%;
   scrollbar-width: none;
+  top: 20vh;
 }
 
 .statistics-block{

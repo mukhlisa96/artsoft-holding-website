@@ -215,3 +215,25 @@ closeBrandsModal.addEventListener('click', ()=>{
 
     // burger.innerHTML="<div class='control-open'>МЕНЮ</div><div class='control-close'>ЗАКРЫТЬ</div>";
 });
+
+ $(document).on('click', '.menu-link', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+ });
+ 
+cbw = document.querySelector('.center-block-wrapper');
+cbw.addEventListener('scroll', ()=>{
+    let contentBlocks = document.querySelectorAll('.center-block');
+    contentBlocks.forEach((content, index)=>{
+
+      // document.getElementById(index).classList.add('active');
+        let contentPosition = content.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+        if (contentPosition<screenPosition){
+
+            content.classList.add('active-w');
+        }else{
+            content.classList.remove('active-w');
+
+        }
+    });
+});

@@ -44,7 +44,7 @@ ul.lang > li:hover {
 .brands-label{
     position: absolute;
     /*top: 40vh;*/
-    left: 40vw;
+    left: 26%;
     z-index: 2;
     color: white;
     font-size: 90px;
