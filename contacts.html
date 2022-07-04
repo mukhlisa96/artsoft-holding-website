@@ -70,9 +70,9 @@
                  <div class="logo"><a href="index.html"><img src="assets/img/logo.svg"></a></div>
                  <div class="menu left-menu">
                      <ul class="menu-links">
-                        <li class="menu-link active"><span class="menu-link-span"></span><a href="#0">Общая информация</a></li>
-                        <li class="menu-link"><span class="menu-link-span"></span><a href="#1">Контакты</a></li>
-                        <li class="menu-link"><span class="menu-link-span"></span><a href="#2">Обратная связь</a></li>
+                        <li class="menu-link active" id="ml0"><span class="menu-link-span"></span><a href="#0">Общая информация</a></li>
+                        <li class="menu-link" id="ml1"><span class="menu-link-span"></span><a href="#1">Контакты</a></li>
+                        <li class="menu-link" id="ml2"><span class="menu-link-span"></span><a href="#2">Обратная связь</a></li>
                      </ul>
                  </div>
               <div class="sound-control">
@@ -419,6 +419,14 @@ scrolling.onscroll = function (e) {
                     navbarBg.removeClass('grey-bg').addClass("blue-bg");
                     svgRect.attr("stroke", "white");
                     svgPath.attr("stroke", "white");
+
+                }
+
+                if(scroll>=500 && scroll<=1500){
+                    abBorder.addClass("grey-border");
+
+                }else{
+                    abBorder.removeClass('grey-border');
 
                 }
             }

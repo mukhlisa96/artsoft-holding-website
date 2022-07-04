@@ -500,3 +500,16 @@ cbw.addEventListener('scroll', ()=>{
         }
     });
 });
+
+ var cbItems = document.querySelectorAll('.center-block');
+                    cbItems.forEach((cbItem, i)=>{
+                        cbItem.addEventListener("mouseover", ()=>{
+                            console.log('#ml'+cbItem.id);
+                            document.querySelector('#ml'+cbItem.id).classList.add("active");
+                         });
+
+                        cbItem.addEventListener("mouseleave", ()=>{
+                            document.querySelector('#ml'+cbItem.id).classList.remove("active");
+
+                         });
+                    });
