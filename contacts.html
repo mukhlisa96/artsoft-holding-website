@@ -267,27 +267,27 @@
                     
                     <div class="form__section form__section--right">
                          <div class="form__section">
-                        <input class="form__input" placeholder="ФИО" type="text" name="name"required>
+                        <input id="name" class="form__input" placeholder="ФИО" type="text" name="name"required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Телефон" type="number" name="phone" required>
+                        <input id="phone" class="form__input" placeholder="Телефон" type="number" name="phone" required>
                     </div>
                     <div class="form__section">
-                        <input class="form__input" placeholder="Компания" type="text" name="company" required>
-                    </div>
-
-                    <div class="form__section">
-                        <input class="form__input" placeholder="Почта" type="email" name="email" required>
+                        <input id="company" class="form__input" placeholder="Компания" type="text" name="company" required>
                     </div>
 
                     <div class="form__section">
-                        <textarea class="form__input" placeholder="Сообщение..." type="text" name="message"></textarea>
+                        <input id="email" class="form__input" placeholder="Почта" type="email" name="email" required>
+                    </div>
+
+                    <div class="form__section">
+                        <textarea id="message" class="form__input" placeholder="Сообщение..." type="text" name="message"></textarea>
                     </div> 
                     <div class="form__section">
-                        <input class="form__input" placeholder="Прикрепить файл" type="file" name="file" required>
+                        <input id="file" class="form__input" placeholder="Прикрепить файл" type="file" name="file" required>
                     </div>
                         <button class="btn btn--default form__close my_form__close" id="my_form_close" style="margin-right: 20px;">Закрыть</button>
-                        <button class="btn btn--default sendForm" id="" value="Submit" type="submit">Отправить</button>
+                        <button class="btn btn--default sendForm" id="sendForm" value="Submit" type="submit">Отправить</button>
 
 
 
@@ -298,7 +298,7 @@
             </section>
 
 
-  <div id='succesModal' class=' fade succesModal'>
+  <div id='succesModal' class='fade succesModal'>
       <div class='modal-dialog modal-confirm'>
         <div class='modal-content'>
           <div class='modal-header'>
@@ -322,14 +322,16 @@
 <script src="assets/js/blockreveals/anime.min.js"></script>
 <script src="assets/js/blockreveals/main.js"></script>
 <script type="text/javascript">
-  
+  document.querySelector('#sendForm').addEventListener('click', ()=>{
+      const inputs = document.querySelectorAll('#name, #phone, #company, #email, #message, #file');
+                      inputs.forEach(input => {
+                        input.value = '';
+                      });
+  });
 
- document.querySelector(".closeSuccesModal").addEventListener('click', () => {
-                    document.querySelector(".succesModal").style.display = "none";
-                });
-// var zInd = getStyle ( ".sendForm" , "z-index" );
-//  alert( zInd );
-
+document.querySelector(".closeSuccesModal").addEventListener('click', () => {
+    document.querySelector(".succesModal").style.display = "none";
+});
 </script>
         <script>
         (function() {
@@ -368,7 +370,10 @@
 
             formEl.addEventListener('submit', function(ev) {
                  document.querySelector(".succesModal").style.display = "block";
-
+const inputs = document.querySelectorAll('#name, #phone, #company, #email, #message, #file');
+                      inputs.forEach(input => {
+                        input.value = '';
+                      });
                
                 ev.preventDefault();
 

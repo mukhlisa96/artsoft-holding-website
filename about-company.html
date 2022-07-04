@@ -578,8 +578,32 @@
                     </div>
                 </div>
                 </div>
+                <style type="text/css">
+                    .products-wrapper-item:nth-child(1):hover{
+                        background-image: url("<?php echo 'hello'?>");
+                        }
+
+                        .products-wrapper-item:nth-child(2):hover{
+                        background-image: url(assets/img/contact-bg.jpg);
+                        }
+
+                        .products-wrapper-item:nth-child(3):hover{
+                        background-image: url(assets/img/contact-bg.jpg);
+                        }
+
+                        .products-wrapper-item:nth-child(4):hover{
+                        background-image: url(assets/img/contact-bg.jpg);
+                        }
+
+                        .products-wrapper-item:nth-child(5):hover{
+                        background-image: url(assets/img/contact-bg.jpg);
+                        }
+                        .products-wrapper-item:nth-child(6):hover{
+                        background-image: url(assets/img/contact-bg.jpg);
+                        }
+                </style>
                 <div class="center-block products-block" id="6" style="color:white;">
-                    
+                    <!-- <div script="this.addEventListener('mouseover', this.style.backgroundImage='url(/assets/img/contacts-bg.jpg);');"> -->
                    <div class="products-wrapper">
                        <a href="booklet/booklet.html"><div class="products-wrapper-item">Название категории</div>
                        </a>
@@ -594,7 +618,10 @@
                        <a href="booklet/booklet.html"><div class="products-wrapper-item">Название категории</div>
                        </a>
                     </div>
-
+                    <div class="footer">
+                        Design by  &nbsp;
+                        <b>FLUGGI IT AGENCY</b>
+                    </div>
 
                 </div>
             </div><!-- center-block-wrapper -->
@@ -653,7 +680,7 @@ scrolling.onscroll = function (e) {
                   $(".sound-control").show();
             }
   
-                if (scroll <= 400) {
+                if (scroll <= 500) {
                     body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");
                     menuLinkSpan1.removeClass('dark-bg').addClass("light-bg");
@@ -662,7 +689,7 @@ scrolling.onscroll = function (e) {
                     svgRect.attr("stroke", "white");
                     svgPath.attr("stroke", "white");
                  
-                 }else if(scroll>=400 && scroll<=1400) {
+                 }else if(scroll>=500 && scroll<=1500) {
                    
                    body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");
@@ -680,7 +707,7 @@ scrolling.onscroll = function (e) {
                     navbarBg.removeClass('grey-bg').addClass("blue-bg");
                     svgRect.attr("stroke", "white");
                     svgPath.attr("stroke", "white");
-                }else if(scroll>=2000 && scroll<=4900) {
+                }else if(scroll>=2000 && scroll<=4000) {
                    
                    body.removeClass('light-font').addClass("dark-font");
                    burgerLine.removeClass('light-bg').addClass("dark-bg");
@@ -692,7 +719,7 @@ scrolling.onscroll = function (e) {
  
                 }
 
-                 if(scroll>=4900){
+                 if(scroll>=4000){
                     body.removeClass('dark-font').addClass("light-font");
                     burgerLine.removeClass('dark-bg').addClass("light-bg");
                     menuLinkSpan1.removeClass('dark-bg').addClass("light-bg");

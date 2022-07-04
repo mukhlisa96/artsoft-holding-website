@@ -507,6 +507,7 @@ top: 38%;
 /*booklet*/
 .products-block{
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 background-color: #89a7df;
@@ -533,39 +534,19 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
+/*.products-wrapper-item:before{
+    background-image: none;
+}*/
 .products-wrapper-item:hover{
 transition: linear 0.5s;
 border: 5px solid white;
-/*background-color: white;*/
-background-image: url(../img/contact-bg.jpg);
-background-position: center;
-color: lightblue;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
 }
 
 
-.products-wrapper-item:nth-child(1):hover{
-background-image: url(../img/contact-bg.jpg);
-}
 
-.products-wrapper-item:nth-child(2):hover{
-background-image: url(../img/contact-bg.jpg);
-}
-
-.products-wrapper-item:nth-child(3):hover{
-background-image: url(../img/contact-bg.jpg);
-}
-
-.products-wrapper-item:nth-child(4):hover{
-background-image: url(../img/contact-bg.jpg);
-}
-
-.products-wrapper-item:nth-child(5):hover{
-background-image: url(../img/contact-bg.jpg);
-}
-.products-wrapper-item:nth-child(6):hover{
-background-image: url(../img/contact-bg.jpg);
-}
 .rect{
 height: 580px;
 width: 580px;
@@ -900,4 +881,10 @@ margin-bottom: 80px;
 .g-stat h2{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+}
+
+.footer{
+    padding-top: 40px;
+    margin-left: 8%;
+    width: 70%;
 }

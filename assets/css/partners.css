@@ -4,8 +4,14 @@
     left: 56%;
     bottom: 15%;
 }
-
-
+@media only screen and (min-width: 768px) {
+    .p-bottom {
+      position: relative;
+      width: 400px;
+      left: 56%;
+      bottom: 15%;
+    }
+}
 .become-partner-wrapper{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -69,4 +75,10 @@ margin-bottom: 30px;
 
 .become-partner-block{
     background-color: #e8ebf1;
+}
+
+.footer{
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

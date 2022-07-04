@@ -15,7 +15,9 @@ html::-webkit-scrollbar {
   scrollbar-width: none;
   display: none;
 }
-
+*{
+    scrollbar-width: none;
+}
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -24,7 +26,24 @@ body::-webkit-scrollbar {
   opacity: 0;
 
 }
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+  scrollbar-width: none;
+  opacity: 0;
+
+}
 .center-block-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+  scrollbar-width: none;
+  overflow: hidden;
+
+}
+
+.center-block::-webkit-scrollbar {
   width: 0;
   height: 0;
   display: none;
@@ -317,7 +336,7 @@ background-color: white;
 display: flex;
 flex-direction: column;
 /*height: 400%;*/
-transition: all 1.5s;
+/*transition: all 1.5s;*/
 z-index: 0;
 scroll-snap-type: y mandatory;
 overflow-y: scroll;
@@ -337,12 +356,12 @@ scroll-snap-align: start;
 .center-block *{
 opacity: 0;
 transform: scale(0.8);
-transition: all 1s ease-in-out;
+transition: transform 1s ease-in-out;
 }
 .active-w *{
     opacity: 1;
     transform: scale(1);
-    transition: all 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 
@@ -734,7 +753,7 @@ z-index: -1;
 position: relative;
 height: 100vh;
 background-image: none;
-width: 1400px;
+width: 100%;
 scrollbar-width: none;
 overflow: hidden;
 }
@@ -911,6 +930,7 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 width: 70%;
+scrollbar-width: none;
 }
 
 .mission-wrapper > .row, .news-wrapper > .row{
@@ -950,7 +970,7 @@ z-index: 5;
 }
 
 .footer{
-width: 80%;
+width: 72vw;
 /*padding-top: 20px;*/
 /*margin-left: 135px;*/
 height: 10%;
@@ -1019,6 +1039,9 @@ color: #fff;
 .dark-border{border-color: rgba(66, 86, 122, 0.07);}
 .light-border{border-color: #ffffff4f;}
 
+.trasnparent-border{
+    border-color: transparent;
+}
 
 button:disabled,
 button[disabled]{
@@ -1261,6 +1284,7 @@ div.news-wrapper{
 scrollbar-width: none;
 padding-left: 18%;
 padding-top: 100px;
+scrollbar-width: none;
 }
 
 

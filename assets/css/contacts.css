@@ -7,7 +7,9 @@
 .main-heading-wrapper p{
     text-transform: none;
 }
-
+.first-block-bg{
+    height: 100%;
+}
 .main-heading-wrapper{
     flex-direction: column;
     min-height: 40vh;
@@ -55,7 +57,7 @@
 display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    width: 70%;
+    width: 76%;
     height: 100%;
     margin-left: 16%;
     margin-right: 8%;
@@ -74,7 +76,10 @@ cursor: pointer;
 background-color: transparent;
 border-top: 1px solid #80808036;
 transition: all 2s ease-out;
+}
 
+.address-line:nth-child(odd){
+border-right: 1px solid #80808036;
 }
 
 .address-line:hover{
@@ -88,8 +93,9 @@ transition: all 2s ease-out;
     position: absolute;
 font-size: 50px;
 display: flex;
-/*justify-content: center;*/
-/*align-items: center;*/
+/*justify-content: center;
+align-items: center;*/
+
 width: 100px;
 height: 100px;
 margin-top: -29%;
@@ -439,4 +445,8 @@ display: block;
     padding-top: 0;
  }
 
+    }
+
+    .center-block-wrapper{
+        background-color: #e8ebf1;
     }

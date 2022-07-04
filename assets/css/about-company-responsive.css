@@ -361,7 +361,9 @@ font-weight: lighter;
         padding: 0;
     }
 }
-
+.footer{
+    padding-bottom: 40px;
+}
 @media only screen and (max-width: 412px) {
 
     .g-row{
