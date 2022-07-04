@@ -266,6 +266,7 @@ cbw.addEventListener('scroll', ()=>{
     contentBlocks.forEach((content, index)=>{
 
       // document.getElementById(index).classList.add('active');
+      // console.log(index);
         let contentPosition = content.getBoundingClientRect().top;
         let screenPosition = window.innerHeight;
         if (contentPosition<screenPosition){
@@ -277,3 +278,16 @@ cbw.addEventListener('scroll', ()=>{
         }
     });
 });
+
+     var cbItems = document.querySelectorAll('.center-block');
+                    cbItems.forEach((cbItem, i)=>{
+                        cbItem.addEventListener("mouseover", ()=>{
+                            console.log('#ml'+cbItem.id);
+                            document.querySelector('#ml'+cbItem.id).classList.add("active");
+                         });
+
+                        cbItem.addEventListener("mouseleave", ()=>{
+                            document.querySelector('#ml'+cbItem.id).classList.remove("active");
+
+                         });
+                    });

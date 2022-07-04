@@ -25,7 +25,6 @@ let absoluteBorder = document.querySelectorAll('.absolute-border');
             let menuLinkSpan = document.querySelectorAll('.menu-link-span');
 
 
-
         
 document.querySelectorAll(".menu-link").forEach((mLink, ind)=>{
     mLink.addEventListener('click', () => {

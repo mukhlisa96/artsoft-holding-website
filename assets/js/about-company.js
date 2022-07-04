@@ -1,4 +1,4 @@
-body = document.querySelector('body');
+var body = document.querySelector('body');
 
 const centerblockWrapper = document.querySelector('.center-block-wrapper');
 let plusContainer = document.querySelector('.plus-container');

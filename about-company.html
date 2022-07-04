@@ -579,7 +579,7 @@
                 </div>
                 </div>
                 <style type="text/css">
-                    .products-wrapper-item:nth-child(1):hover{
+                    /*.products-wrapper-item:nth-child(1):hover{
                         background-image: url("<?php echo 'hello'?>");
                         }
 
@@ -600,10 +600,15 @@
                         }
                         .products-wrapper-item:nth-child(6):hover{
                         background-image: url(assets/img/contact-bg.jpg);
-                        }
+                        }*/
                 </style>
+
+          <!--       test.addEventListener("mouseover", function( event ) {
+  // highlight the mouseover target
+  event.target.style.color = "o -->
+              
                 <div class="center-block products-block" id="6" style="color:white;">
-                    <!-- <div script="this.addEventListener('mouseover', this.style.backgroundImage='url(/assets/img/contacts-bg.jpg);');"> -->
+                 
                    <div class="products-wrapper">
                        <a href="booklet/booklet.html"><div class="products-wrapper-item">Название категории</div>
                        </a>
@@ -628,7 +633,19 @@
         </div><!-- carousel-end -->
 
         </div>
+  <script type="text/javascript">
+                    var items = document.querySelectorAll('.products-wrapper-item');
+                    items.forEach((item, i)=>{
+                        item.addEventListener("mouseover", ()=>{
+                            item.style.backgroundImage = "url('assets/img/contact-bg.jpg')";
+                         });
 
+                        item.addEventListener("mouseleave", ()=>{
+                            item.style.backgroundImage = "";
+                         });
+                    });
+                    
+                </script>
         <div class="right-sidebar absolute-border">
             <div class="fourth">
                  <div class="burger">
