@@ -1,4 +1,7 @@
-body = document.querySelector('body');
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+var body = document.querySelector('body');
 
 const centerblockWrapper = document.querySelector('.center-block-wrapper');
 let plusContainer = document.querySelector('.plus-container');

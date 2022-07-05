@@ -616,7 +616,7 @@ transition: transform 0.8s ease-in;
 }
 
 .control-open.pull-right{
-transform: translateX(400%);
+transform: translateX(1000px);
 transition: transform 0.2s ease-in;   
 }
 
@@ -624,7 +624,7 @@ transition: transform 0.2s ease-in;
 position: absolute;
 top: 50%;
 right: 40%;
-transform: translateX(400%);
+transform: translateX(1000px);
 transition: transform 0.2s ease-in;  
 }
 

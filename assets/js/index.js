@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
 var body = document.querySelector('body');
 
 

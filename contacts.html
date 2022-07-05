@@ -259,8 +259,12 @@
                         <p>Заполните форму обратной связи, если у вас остались вопросы или пожелания. Мы свяжемся с вами в ближайшее время</p>
 
                             <br><br> <br><br> 
-                         <input type="checkbox" name="" required> 
-                         <label class="checkbox-label">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных</label>
+                         
+                         <label class="checkbox-label">
+                            <input type="checkbox" name="" required> 
+                         Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных
+                        </label>
+                     </div>
                     </div>
                    
                    
@@ -294,7 +298,7 @@
 
                     </div>
 
-                </form>
+            </form>
             </section>
 
 
@@ -322,16 +326,8 @@
 <script src="assets/js/blockreveals/anime.min.js"></script>
 <script src="assets/js/blockreveals/main.js"></script>
 <script type="text/javascript">
-  document.querySelector('#sendForm').addEventListener('click', ()=>{
-      const inputs = document.querySelectorAll('#name, #phone, #company, #email, #message, #file');
-                      inputs.forEach(input => {
-                        input.value = '';
-                      });
-  });
 
-document.querySelector(".closeSuccesModal").addEventListener('click', () => {
-    document.querySelector(".succesModal").style.display = "none";
-});
+
 </script>
         <script>
         (function() {
@@ -347,6 +343,7 @@ document.querySelector(".closeSuccesModal").addEventListener('click', () => {
                     onCover: function(contentEl, revealerEl) {
                         formEl.classList.add('form--open');
                         contentEl.style.opacity = 1;
+                         document.querySelector('.left-menu').classList.toggle('disappear');
                     },
                     onComplete: function() {
                         closeCtrl.addEventListener('click', closeForm);
@@ -366,6 +363,8 @@ document.querySelector(".closeSuccesModal").addEventListener('click', () => {
                         contentEl.style.opacity = 0;
                     }
                 });
+                 document.querySelector(".succesModal").style.display = "none";
+                   document.querySelector('.left-menu').classList.toggle('disappear');
             }
 
             formEl.addEventListener('submit', function(ev) {
@@ -374,11 +373,17 @@ const inputs = document.querySelectorAll('#name, #phone, #company, #email, #mess
                       inputs.forEach(input => {
                         input.value = '';
                       });
-               
+             
                 ev.preventDefault();
 
 
             });
+
+document.querySelector(".closeSuccesModal").addEventListener('click', closeForm);
+// document.querySelector(".closeSuccesModal").addEventListener('click', () => {
+//     document.querySelector(".succesModal").style.display = "none";
+// });
+
         })();
         </script>
 

@@ -283,7 +283,8 @@ gap: 2%;
 }
 
 #playingCircleVideo{
-    width: 400px;
+    width: 90%;
+    padding: 5%;
     height: auto;
     top: 30%;
     left: 1.5%;
@@ -291,7 +292,7 @@ gap: 2%;
 
 #closeVideoCircle{
     top: 18%;
-    left: 83%;
+    left: 80%;
 }
 
 .desctop-stat{

@@ -1,3 +1,7 @@
+
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 var body = document.querySelector('body');
 
 const centerblockWrapper = document.querySelector('.center-block-wrapper');
@@ -410,13 +414,13 @@ let vidC = document.querySelector(".circle-video");
 
 
 vidC.addEventListener('click', () => {
-    playingCircleVideo.style.display = "block";
+    playingCircleVideo.style.display = "flex";
     document.querySelector(".video-blacklayer").style.display = "block";
     closeVideoCircle.style.display = "block";
 });
 
 playBtn.addEventListener('click', () => {
-    playingCircleVideo.style.display = "block";
+    playingCircleVideo.style.display = "flex";
     document.querySelector(".video-blacklayer").style.display = "block";
     closeVideoCircle.style.display = "block";
 });
